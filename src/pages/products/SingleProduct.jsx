@@ -206,7 +206,7 @@ const SingleProduct = () => {
           </div>
         </div>
       </div>
-    </div> // ❌ This was the issue — extra or missing brackets
+    </div> 
   );
 };
 
