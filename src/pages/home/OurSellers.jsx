@@ -85,7 +85,7 @@ const OurSellers = () => {
             </Carousel>
           ) : (
             <p className="text-center text-[#5a382d] text-lg">
-              {t("no_products_found")}
+              {t("no_products_found")} You're welcome !
             </p>
           )}
         </div>
