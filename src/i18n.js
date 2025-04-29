@@ -636,16 +636,6 @@ i18n
           },
 
           contact: {
-            page_title: "Contactez-nous", 
-            heading: "اتصل بنا",   
-            subtitle: "لا تتردد في التواصل معنا لأي استفسار.",
-            address_label: "العنوان",
-            address_value: "سوق السوف، تونس",
-            email_label: "البريد الإلكتروني",
-            phone_label: "الهاتف",
-          },
-          
-          contact: {
             page_title: "اتصل بنا",
             heading: "اتصل بنا",
             subtitle: "لا تتردد في التواصل معنا لأي استفسار.",
