@@ -286,7 +286,6 @@ i18n
           banner_description: "Wahret Zmen est une boutique unique de vêtements traditionnels tunisiens située à El Aswak, Tunis, rue Essouf. La boutique propose une sélection soignée de vêtements tunisiens authentiques, dont la célèbre Jebba, réputée pour son artisanat raffiné et sa valeur culturelle.",
           discover_now: "Découvrir maintenant",
           wahret_zmen_collection: "Collection Wahret Zmen",
-          select_category: "Sélectionner une catégorie",
           no_products_found: "Aucun produit trouvé.",
           our_sellers_intro_html: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des <strong>Caftans</strong> élégants aux <strong>Jebbas</strong> classiques, explorez la beauté du patrimoine dans chaque pièce.",
 
@@ -573,14 +572,29 @@ i18n
           products: "المنتجات",
           "about-menu": "من نحن",
           "contact-menu": "اتصل بنا",
-          admin_dashboard: "لوحة تحكم المدير",
+          dashboard: "لوحة التحكم",
+          orders: "الطلبات",
+          logout: "تسجيل الخروج",
+          select_category: "اختر الفئة",
+          categories: {
+          all: "الكل",
+          men: "رجال",
+          women: "نساء",
+         children: "أطفال",
+         },
+         product_filters: {
+         label: "اختر المنتجات", 
+         men: "رجال",
+         women: "نساء",
+         children: "أطفال",
+         all: "الكل",
+         },
+
       
           search_input: {
             placeholder: "ابحث عن المنتجات..."
           },
-          dashboard: "لوحة التحكم",
-          orders: "الطلبات",
-          logout: "تسجيل الخروج",
+          
       
           footer: {
             brand: "وهرة الزمن",
