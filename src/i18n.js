@@ -567,7 +567,7 @@ i18n
         translation: {
           
           
-          home: "استقبال",
+          home: "Accueil",
     products: "Produits",
     "about-menu": "A propos", 
     "contact-menu": "Contactez-nous",
@@ -579,7 +579,7 @@ i18n
           dashboard: "لوحة التحكم",
           orders: "الطلبات",
           logout: "تسجيل خروج",
-          select_category: "Selectionnez une catégorie",
+          select_category: "اختر الفئة",
           categories: {
             all: "الكل",
             men: "رجال",
