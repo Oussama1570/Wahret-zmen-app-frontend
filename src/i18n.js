@@ -296,41 +296,7 @@ i18n
             overview: "Chez Wahret Zmen, nous préservons l’essence de l’artisanat tunisien en mêlant techniques classiques et raffinement moderne. Que vous cherchiez une pièce luxueuse ou une tenue intemporelle, notre collection célèbre la beauté de la tradition."
           },
 
-          about: {
-            title: "À propos de Wahret Zmen",
-            description: "Wahret Zmen est une boutique de vêtements traditionnels tunisiens qui célèbre le patrimoine à travers une mode intemporelle.",
-            mission_title: "Notre Mission",
-            mission_text1: "Wahret Zmen est plus qu'une boutique — c'est un hommage à l'identité tunisienne, à l'artisanat et à l'élégance. Nous sommes spécialisés dans les vêtements authentiques tels que les <strong>Jebbas</strong>, <strong>Caftans</strong>, et les robes finement brodées, fabriquées à la main par des artisans locaux.",
-            mission_text2: "Chaque article de notre collection reflète des générations d'art traditionnel, soigneusement sélectionné pour les clients recherchant à la fois le style et l'authenticité culturelle. Notre vision est de préserver nos racines tout en habillant le monde de la beauté tunisienne.",
-            crafted_title: "Confectionné avec Amour",
-            crafted_text1: "Nos artisans utilisent des techniques traditionnelles transmises de génération en génération pour garantir que chaque article soit unique, durable et riche en détails. Des tenues de mariage aux vêtements culturels modernes, Wahret Zmen mêle héritage et élégance.",
-            crafted_text2: "Chaque pièce est une œuvre de passion, cousue avec fierté, et conçue pour mettre en valeur la beauté de la culture tunisienne.",
-            behind_title: "Derrière la Boutique",
-            behind_text: "Entrez dans notre univers de broderies délicates et de savoir-faire ancestral. Le cœur de Wahret Zmen réside entre les mains de nos artisans talentueux.",
-            join_title: "Rejoignez la Tradition",
-            join_text1: "Que vous visitiez notre boutique en personne ou parcouriez notre magasin en ligne, nous vous invitons à découvrir l'esprit de la Tunisie tissé dans chaque vêtement.",
-            join_text2: "Wahret Zmen est une célébration de l'héritage, de l'élégance, et de l'identité — conçue pour vous."
-          },
-
-          "contact": {
-  "page_title": "Contactez-nous",
-  "heading": "Contactez-nous",
-  "subtitle": "N'hésitez pas à nous contacter pour toute demande.",
-  "address_label": "Adresse",
-  "address_value": "Souk Essouf, Tunis",
-  "email_label": "Email",
-  "phone_label": "Téléphone",
-  "title": "Contactez la boutique Wahret Zmen",
-  "description": "Des questions sur notre collection de vêtements traditionnels ? Vous recherchez un design personnalisé ou une commande spéciale ? Remplissez le formulaire ci-dessous et notre équipe vous répondra dès que possible.",
-  "name_placeholder": "Votre nom",
-  "email_placeholder": "Votre e-mail",
-  "subject_placeholder": "Sujet",
-  "message_placeholder": "Votre message",
-  "send_message": "Envoyer le message",
-  "sending": "Envoi...",
-  "success_message": "Message envoyé avec succès !",
-  "error_message": "Échec de l'envoi du message. Réessayez plus tard."
-},
+         
 
           
 
@@ -556,7 +522,42 @@ i18n
             go_to_orders: "Voir les commandes",
             error_title: "Erreur!",
             error_message: "Échec de la commande"
-          }
+          },
+          about: {
+            title: "À propos de Wahret Zmen",
+            description: "Wahret Zmen est une boutique de vêtements traditionnels tunisiens qui célèbre le patrimoine à travers une mode intemporelle.",
+            mission_title: "Notre Mission",
+            mission_text1: "Wahret Zmen est plus qu'une boutique — c'est un hommage à l'identité tunisienne, à l'artisanat et à l'élégance. Nous sommes spécialisés dans les vêtements authentiques tels que les <strong>Jebbas</strong>, <strong>Caftans</strong>, et les robes finement brodées, fabriquées à la main par des artisans locaux.",
+            mission_text2: "Chaque article de notre collection reflète des générations d'art traditionnel, soigneusement sélectionné pour les clients recherchant à la fois le style et l'authenticité culturelle. Notre vision est de préserver nos racines tout en habillant le monde de la beauté tunisienne.",
+            crafted_title: "Confectionné avec Amour",
+            crafted_text1: "Nos artisans utilisent des techniques traditionnelles transmises de génération en génération pour garantir que chaque article soit unique, durable et riche en détails. Des tenues de mariage aux vêtements culturels modernes, Wahret Zmen mêle héritage et élégance.",
+            crafted_text2: "Chaque pièce est une œuvre de passion, cousue avec fierté, et conçue pour mettre en valeur la beauté de la culture tunisienne.",
+            behind_title: "Derrière la Boutique",
+            behind_text: "Entrez dans notre univers de broderies délicates et de savoir-faire ancestral. Le cœur de Wahret Zmen réside entre les mains de nos artisans talentueux.",
+            join_title: "Rejoignez la Tradition",
+            join_text1: "Que vous visitiez notre boutique en personne ou parcouriez notre magasin en ligne, nous vous invitons à découvrir l'esprit de la Tunisie tissé dans chaque vêtement.",
+            join_text2: "Wahret Zmen est une célébration de l'héritage, de l'élégance, et de l'identité — conçue pour vous."
+          },
+
+          "contact": {
+  "page_title": "Contactez-nous",
+  "heading": "Contactez-nous",
+  "subtitle": "N'hésitez pas à nous contacter pour toute demande.",
+  "address_label": "Adresse",
+  "address_value": "Souk Essouf, Tunis",
+  "email_label": "Email",
+  "phone_label": "Téléphone",
+  "title": "Contactez la boutique Wahret Zmen",
+  "description": "Des questions sur notre collection de vêtements traditionnels ? Vous recherchez un design personnalisé ou une commande spéciale ? Remplissez le formulaire ci-dessous et notre équipe vous répondra dès que possible.",
+  "name_placeholder": "Votre nom",
+  "email_placeholder": "Votre e-mail",
+  "subject_placeholder": "Sujet",
+  "message_placeholder": "Votre message",
+  "send_message": "Envoyer le message",
+  "sending": "Envoi...",
+  "success_message": "Message envoyé avec succès !",
+  "error_message": "Échec de l'envoi du message. Réessayez plus tard."
+}
           
 
           
@@ -618,42 +619,7 @@ i18n
           },
 
           
-          about: {
-            title: "حول وهرة الزمن",
-            description: "وهرة الزمن هي بوتيك ملابس تقليدية تونسية تحتفي بالإرث الثقافي من خلال أزياء خالدة.",
-            mission_title: "مهمتنا",
-            mission_text1: "وهرة الزمن أكثر من مجرد بوتيك — إنها تكريم للهوية التونسية، والحرف اليدوية، والأناقة. نحن متخصصون في الملابس الأصيلة مثل الجباب، القفاطين، والفساتين المطرزة يدويًا من قبل حرفيين محليين.",
-            mission_text2: "كل قطعة في مجموعتنا تعكس أجيالاً من الفن التقليدي، مختارة بعناية لمن يبحثون عن الأناقة والأصالة الثقافية. رؤيتنا هي الحفاظ على الجذور بينما نلبس العالم بجمال تونسي.",
-            crafted_title: "مصنوعة بحب",
-            crafted_text1: "يستخدم حرفيونا تقنيات تقليدية توارثتها الأجيال لضمان أن كل قطعة فريدة، ومتينة، وغنية بالتفاصيل. من ملابس الأعراس إلى الأزياء الثقافية العصرية، تجمع وهرة الزمن بين التراث والأناقة.",
-            crafted_text2: "كل قطعة عمل من الشغف، خيطت بالفخر، وصممت لتُبرز جمال الثقافة التونسية.",
-            behind_title: "وراء البوتيك",
-            behind_text: "ادخل إلى عالمنا من التطريز الدقيق والمهارات المتوارثة. قلب وهرة الزمن يكمن في أيدي حرفيينا المهرة.",
-            join_title: "انضم إلى التقاليد",
-            join_text1: "سواء كنت تزور متجرنا أو تتسوق عبر الإنترنت، نرحب بك لاكتشاف روح تونس المنسوجة في كل قطعة.",
-            join_text2: "وهرة الزمن هو احتفال بالإرث، والأناقة، والهوية — صُمم لأجلك."
-          },
-
-          contact: {
-            page_title: "اتصل بنا",
-            heading: "اتصل بنا",
-            subtitle: "لا تتردد في التواصل معنا لأي استفسار.",
-            address_label: "العنوان",
-            address_value: "سوق السوف، تونس",
-            email_label: "البريد الإلكتروني",
-            phone_label: "الهاتف",
-            title: "تواصل مع بوتيك وهرة الزمن",
-            description: "هل لديك أسئلة حول مجموعتنا من الملابس التقليدية؟ تبحث عن تصميم مخصص أو طلب خاص؟ يسعدنا سماعك! املأ النموذج أدناه وسيتواصل معك فريقنا في أقرب وقت ممكن.",
-            name_placeholder: "اسمك",
-            email_placeholder: "بريدك الإلكتروني",
-            subject_placeholder: "الموضوع",
-            message_placeholder: "رسالتك",
-            send_message: "إرسال الرسالة",
-            sending: "جارٍ الإرسال...",
-            success_message: "تم إرسال الرسالة بنجاح!",
-            error_message: "فشل في إرسال الرسالة. حاول مرة أخرى لاحقًا."
-          },
-          
+                  
           
         
           stock: "المخزون",
@@ -854,6 +820,43 @@ i18n
             go_to_orders: "عرض الطلبات",
             error_title: "خطأ!",
             error_message: "فشل في إرسال الطلب"
+          },  // ✅ ADD COMMA HERE!
+          
+          about: {
+            title: "حول وهرة الزمن",
+            description: "وهرة الزمن هي بوتيك ملابس تقليدية تونسية تحتفي بالإرث الثقافي من خلال أزياء خالدة.",
+            mission_title: "مهمتنا",
+            mission_text1: "وهرة الزمن أكثر من مجرد بوتيك — إنها تكريم للهوية التونسية، والحرف اليدوية، والأناقة. نحن متخصصون في الملابس الأصيلة مثل الجباب، القفاطين، والفساتين المطرزة يدويًا من قبل حرفيين محليين.",
+            mission_text2: "كل قطعة في مجموعتنا تعكس أجيالاً من الفن التقليدي، مختارة بعناية لمن يبحثون عن الأناقة والأصالة الثقافية. رؤيتنا هي الحفاظ على الجذور بينما نلبس العالم بجمال تونسي.",
+            crafted_title: "مصنوعة بحب",
+            crafted_text1: "يستخدم حرفيونا تقنيات تقليدية توارثتها الأجيال لضمان أن كل قطعة فريدة، ومتينة، وغنية بالتفاصيل. من ملابس الأعراس إلى الأزياء الثقافية العصرية، تجمع وهرة الزمن بين التراث والأناقة.",
+            crafted_text2: "كل قطعة عمل من الشغف، خيطت بالفخر، وصممت لتُبرز جمال الثقافة التونسية.",
+            behind_title: "وراء البوتيك",
+            behind_text: "ادخل إلى عالمنا من التطريز الدقيق والمهارات المتوارثة. قلب وهرة الزمن يكمن في أيدي حرفيينا المهرة.",
+            join_title: "انضم إلى التقاليد",
+            join_text1: "سواء كنت تزور متجرنا أو تتسوق عبر الإنترنت، نرحب بك لاكتشاف روح تونس المنسوجة في كل قطعة.",
+            join_text2: "وهرة الزمن هو احتفال بالإرث، والأناقة، والهوية — صُمم لأجلك."
+          },
+          
+
+          contact: {
+            page_title: "اتصل بنا",
+            heading: "اتصل بنا",
+            subtitle: "لا تتردد في التواصل معنا لأي استفسار.",
+            address_label: "العنوان",
+            address_value: "سوق السوف، تونس",
+            email_label: "البريد الإلكتروني",
+            phone_label: "الهاتف",
+            title: "تواصل مع بوتيك وهرة الزمن",
+            description: "هل لديك أسئلة حول مجموعتنا من الملابس التقليدية؟ تبحث عن تصميم مخصص أو طلب خاص؟ يسعدنا سماعك! املأ النموذج أدناه وسيتواصل معك فريقنا في أقرب وقت ممكن.",
+            name_placeholder: "اسمك",
+            email_placeholder: "بريدك الإلكتروني",
+            subject_placeholder: "الموضوع",
+            message_placeholder: "رسالتك",
+            send_message: "إرسال الرسالة",
+            sending: "جارٍ الإرسال...",
+            success_message: "تم إرسال الرسالة بنجاح!",
+            error_message: "فشل في إرسال الرسالة. حاول مرة أخرى لاحقًا."
           }
           
 
