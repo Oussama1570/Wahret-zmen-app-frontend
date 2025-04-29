@@ -573,6 +573,7 @@ i18n
           "about-menu": "من نحن",
           "contact-menu": "اتصل بنا",
           dashboard: "لوحة التحكم",
+          "admin_dashboard":"لوحة التّحكّم المدير",
           orders: "الطلبات",
           logout: "تسجيل الخروج",
           select_category: "اختر الفئة",
