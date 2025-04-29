@@ -22,6 +22,7 @@
 
 
 
+
 /* ========================== */
 /* 🔰 Logo Section */
 /* ========================== */
@@ -104,6 +105,21 @@
   width: 100%;
   left: 0;
 }
+
+.small-dashboard-link {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6C757D;
+  transition: transform 0.2s ease-in-out;
+}
+
+.small-dashboard-link:hover {
+  transform: scale(1.1);
+  color: #000000;
+}
+
 
 /* ========================== */
 /* 📱 Mobile Nav Menu Styles */
