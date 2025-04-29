@@ -39,32 +39,7 @@ i18n
           },
 
 
-          
-          home: "الرئيسية",
-    products: "المنتجات",
-    "about-menu": "من نحن", // Arabic
-    "contact-menu": "اتصل بنا",
-    search_input: {
-      placeholder: "ابحث عن المنتجات..."
-    },
-    dashboard: "لوحة التحكم",
-    orders: "الطلبات",
-    logout: "تسجيل خروج",
-    select_category: "اختر الفئة",
-    categories: {
-      all: "الكل",
-      men: "رجال",
-      women: "نساء",
-      children: "أطفال",
-    },
-    product_filters: {
-      label: "اختيار المنتجات", // Arabic translation of the label
-      men: "رجال",
-      women: "نساء",
-      children: "أطفال",
-      "all": "الكل" , // Arabic translation for "All"
-    
-    },
+         
 
     home_title: "وهرة الزمن - الملابس التقليدية وبائعونا",
     home_meta_description: "مرحبًا بكم في وهرة الزمن، استكشفوا مجموعتنا من الملابس التقليدية، والوافدات الجديدة، وآخر صيحات الموضة.",
