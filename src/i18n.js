@@ -623,46 +623,9 @@ i18n
 
 
          
-          cart: {
-            title: "Panier",
-            clear_cart: "Vider le panier",
-            category: "Catégorie",
-            color: "Couleur",
-            original: "Original",
-            qty: "Qté",
-            remove: "Supprimer",
-            empty: "Votre panier est vide !",
-            subtotal: "Sous-total",
-            proceed_to_checkout: "Passer à la caisse"
-          },
+        
           
-          checkout: {
-            title: "Paiement sécurisé",
-            payment_method: "Paiement à la livraison",
-            total_price: "Prix total:",
-            items: "Articles",
-            personal_details: "Informations personnelles",
-            full_name: "Nom complet",
-            email: "Adresse e-mail",
-            phone: "Numéro de téléphone",
-            shipping_address: "Adresse de livraison",
-            address: "Adresse / Rue",
-            city: "Ville",
-            country: "Pays",
-            state: "Région",
-            zipcode: "Code postal",
-            agree: "J'accepte les",
-            terms: "Conditions générales",
-            policy: "Conditions d'achat",
-            and: "et",
-            place_order: "Passer la commande",
-            processing: "Traitement de votre commande...",
-            order_confirmed: "Commande confirmée",
-            success_message: "Votre commande a été passée avec succès!",
-            go_to_orders: "Voir les commandes",
-            error_title: "Erreur!",
-            error_message: "Échec de la commande"
-          }
+          
           
 
           
