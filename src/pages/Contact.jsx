@@ -30,7 +30,10 @@ const Contact = () => {
           <p><strong>{t("contact.address_label")}:</strong> {t("contact.address_value")}</p>
           <p><strong>{t("contact.email_label")}:</strong> emnabes930@gmail.com</p>
           <p>wahretzmensabri521@gmail.com</p>
-          <p><strong>{t("contact.phone_label")}:</strong> +216 12 345 678</p>
+          <p><strong>{t("contact.phone_label")}:</strong>{' '}
+          <span dir="ltr" style={{ unicodeBidi: 'bidi-override' }}>+216 12 345 678</span>
+          </p>
+
         </div>
 
         <div className="contact-content flex flex-col lg:flex-row gap-10 items-start justify-center">
