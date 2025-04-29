@@ -307,15 +307,14 @@ i18n
         
       fr: {
         translation: {
-          navbar: {
-            brand: "Wahret Zmen"
+          "navbar": {
+            "brand": "Wahret Zmen"
           },
           home: "Accueil",
-          products: "Produits",
-          "about-menu": "À propos",
-          "contact-menu": "Contact",
-          admin_dashboard: "Tableau de bord",
-      
+    products: "Produits",
+    "about-menu": "À propos",  // ✅ as you asked
+    "contact-menu": "Contactez-nous",  // ✅ as you asked
+    "admin_dashboard":"Tableau de bord",
           search_input: {
             placeholder: "Rechercher des produits..."
           },
@@ -330,155 +329,84 @@ i18n
             children: "Enfants",
           },
           product_filters: {
-            label: "Sélectionner les produits",
+            label: "Sélectionner les produits", // French translation of the label
             men: "Hommes",
             women: "Femmes",
             children: "Enfants",
-            all: "Tous",
-          },
-      
-          home_title: "Wahret Zmen - Vêtements traditionnels & Nos vendeurs",
+            "all": "Tous",  // French translation for "All"
+},
+          
+
+          home_title: "Wahret Zmen - Vêtements traditionnels et nos vendeurs",
           home_meta_description: "Bienvenue chez Wahret Zmen, explorez notre collection de vêtements traditionnels, nos nouveautés et les dernières tendances.",
-          home_intro_html: "Bienvenue à la <strong>Boutique Wahret Zmen</strong>, où la tradition rencontre l'élégance. Découvrez nos vêtements faits main, inspirés du riche patrimoine culturel tunisien. Une mode intemporelle alliant histoire et modernité.",
-          home_banner_text: "Marchez dans la tradition avec élégance. Wahret Zmen vous propose une collection intemporelle de tenues tunisiennes authentiques, conçues avec passion et héritage.",
-      
-          our_sellers: "Nos vendeurs",
-          our_sellers_intro: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des caftans élégants aux jebbas classiques, explorez la beauté du patrimoine dans chaque pièce.",
-          our_sellers_intro_html: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des <strong>Caftans</strong> élégants aux <strong>Jebbas</strong> classiques, explorez la beauté du patrimoine dans chaque pièce.",
-      
+          home_intro_html: "Bienvenue à la <strong>Boutique Wahret Zmen</strong>, où la tradition rencontre l'élégance. Explorez nos vêtements faits main, inspirés du riche patrimoine culturel tunisien. Découvrez une mode intemporelle mêlant histoire et raffinement moderne.",
+          home_banner_text: "Entrez dans la tradition avec élégance. La boutique Wahret Zmen vous propose une collection intemporelle de tenues tunisiennes authentiques, confectionnées avec passion et héritage.",
+          our_sellers: "Nos Vendeurs",
+          our_sellers_intro: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des Kaftans élégants aux Jebbas classiques, explorez la beauté du patrimoine dans chaque pièce.",
           latest_news: "Actualités & Tendances",
-          latest_news_intro: "Restez informé(e) des dernières nouveautés de Wahret Zmen ! Découvrez nos nouvelles collections, conseils mode et offres exclusives valorisant la tradition dans un monde moderne.",
-      
+          latest_news_intro: "Restez informé des nouveautés de Wahret Zmen ! Découvrez nos nouvelles collections, conseils mode, et offres exclusives qui font vivre la tradition dans un monde moderne.",
           banner_img_alt: "Vêtements traditionnels tunisiens",
           banner_title: "Wahret Zmen par Sabri – Préserver l'héritage tunisien avec élégance",
-          banner_description: "Wahret Zmen est une boutique unique de vêtements traditionnels tunisiens située à Souk Essouf, Tunis. Nous proposons une sélection soigneusement élaborée de vêtements authentiques, notamment la célèbre Jebba réputée pour sa finesse artisanale et sa valeur culturelle.",
-      
+          banner_description: "Wahret Zmen est une boutique unique de vêtements traditionnels tunisiens située à El Aswak, Tunis, rue Essouf. La boutique propose une sélection soignée de vêtements tunisiens authentiques, dont la célèbre Jebba, réputée pour son artisanat raffiné et sa valeur culturelle.",
           discover_now: "Découvrir maintenant",
           wahret_zmen_collection: "Collection Wahret Zmen",
           select_category: "Sélectionner une catégorie",
           no_products_found: "Aucun produit trouvé.",
+          our_sellers_intro_html: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des <strong>Caftans</strong> élégants aux <strong>Jebbas</strong> classiques, explorez la beauté du patrimoine dans chaque pièce.",
+
           load_more: "Charger plus",
           products_page: {
             title: "Collection Wahret Zmen",
-            overview: "Chez Wahret Zmen, nous préservons l’essence de l’artisanat tunisien en alliant techniques traditionnelles et touches modernes. Que vous recherchiez une pièce d’exception ou une tenue intemporelle, notre collection célèbre la beauté du patrimoine tunisien."
+            overview: "Chez Wahret Zmen, nous préservons l’essence de l’artisanat tunisien en mêlant techniques classiques et raffinement moderne. Que vous cherchiez une pièce luxueuse ou une tenue intemporelle, notre collection célèbre la beauté de la tradition."
           },
-          
+
           about: {
             title: "À propos de Wahret Zmen",
-            description: "Wahret Zmen est une boutique de vêtements traditionnels tunisiens célébrant le patrimoine à travers une mode intemporelle.",
-            mission_title: "Notre mission",
-            mission_text1: "Wahret Zmen est bien plus qu'une simple boutique — c'est un hommage à l'identité tunisienne, à l'artisanat et à l'élégance. Nous sommes spécialisés dans les vêtements authentiques tels que les <strong>Jebbas</strong>, les <strong>Caftans</strong> et les robes finement brodées à la main par des artisans locaux.",
-            mission_text2: "Chaque pièce de notre collection reflète des générations de savoir-faire traditionnel, soigneusement sélectionnée pour celles et ceux recherchant l'élégance et l'authenticité culturelle. Notre vision : préserver nos racines tout en sublimant le monde par la beauté tunisienne.",
-            crafted_title: "Confectionné avec amour",
-            crafted_text1: "Nos artisans utilisent des techniques traditionnelles transmises de génération en génération afin de garantir que chaque création soit unique, durable et riche en détails. Des tenues de mariage aux vêtements culturels modernes, Wahret Zmen marie héritage et élégance.",
+            description: "Wahret Zmen est une boutique de vêtements traditionnels tunisiens qui célèbre le patrimoine à travers une mode intemporelle.",
+            mission_title: "Notre Mission",
+            mission_text1: "Wahret Zmen est plus qu'une boutique — c'est un hommage à l'identité tunisienne, à l'artisanat et à l'élégance. Nous sommes spécialisés dans les vêtements authentiques tels que les <strong>Jebbas</strong>, <strong>Caftans</strong>, et les robes finement brodées, fabriquées à la main par des artisans locaux.",
+            mission_text2: "Chaque article de notre collection reflète des générations d'art traditionnel, soigneusement sélectionné pour les clients recherchant à la fois le style et l'authenticité culturelle. Notre vision est de préserver nos racines tout en habillant le monde de la beauté tunisienne.",
+            crafted_title: "Confectionné avec Amour",
+            crafted_text1: "Nos artisans utilisent des techniques traditionnelles transmises de génération en génération pour garantir que chaque article soit unique, durable et riche en détails. Des tenues de mariage aux vêtements culturels modernes, Wahret Zmen mêle héritage et élégance.",
             crafted_text2: "Chaque pièce est une œuvre de passion, cousue avec fierté, et conçue pour mettre en valeur la beauté de la culture tunisienne.",
-            behind_title: "Derrière la boutique",
-            behind_text: "Découvrez notre univers de broderies délicates et de savoir-faire transmis à travers les âges. Le cœur de Wahret Zmen réside dans les mains de nos artisans talentueux.",
-            join_title: "Rejoignez la tradition",
-            join_text1: "Que vous visitiez notre boutique physique ou notre boutique en ligne, nous vous invitons à découvrir l'âme tunisienne tissée dans chacune de nos créations.",
-            join_text2: "Wahret Zmen est une célébration de l'héritage, de l'élégance et de l'identité — façonnée pour vous."
+            behind_title: "Derrière la Boutique",
+            behind_text: "Entrez dans notre univers de broderies délicates et de savoir-faire ancestral. Le cœur de Wahret Zmen réside entre les mains de nos artisans talentueux.",
+            join_title: "Rejoignez la Tradition",
+            join_text1: "Que vous visitiez notre boutique en personne ou parcouriez notre magasin en ligne, nous vous invitons à découvrir l'esprit de la Tunisie tissé dans chaque vêtement.",
+            join_text2: "Wahret Zmen est une célébration de l'héritage, de l'élégance, et de l'identité — conçue pour vous."
           },
-          
-          contact: {
-            page_title: "Contactez-nous",
-            heading: "Contactez-nous",
-            subtitle: "N'hésitez pas à nous contacter pour toute demande.",
-            address_label: "Adresse",
-            address_value: "Souk Essouf, Tunis",
-            email_label: "E-mail",
-            phone_label: "Téléphone",
-            title: "Contactez la boutique Wahret Zmen",
-            description: "Des questions sur notre collection de vêtements traditionnels ? Vous recherchez un modèle personnalisé ou une commande spéciale ? Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les plus brefs délais.",
-            name_placeholder: "Votre nom",
-            email_placeholder: "Votre e-mail",
-            subject_placeholder: "Sujet",
-            message_placeholder: "Votre message",
-            send_message: "Envoyer le message",
-            sending: "Envoi en cours...",
-            success_message: "Votre message a été envoyé avec succès !",
-            error_message: "Échec de l'envoi du message. Veuillez réessayer plus tard."
-          },
+
+          "contact": {
+  "page_title": "Contactez-nous",
+  "heading": "Contactez-nous",
+  "subtitle": "N'hésitez pas à nous contacter pour toute demande.",
+  "address_label": "Adresse",
+  "address_value": "Souk Essouf, Tunis",
+  "email_label": "Email",
+  "phone_label": "Téléphone",
+  "title": "Contactez la boutique Wahret Zmen",
+  "description": "Des questions sur notre collection de vêtements traditionnels ? Vous recherchez un design personnalisé ou une commande spéciale ? Remplissez le formulaire ci-dessous et notre équipe vous répondra dès que possible.",
+  "name_placeholder": "Votre nom",
+  "email_placeholder": "Votre e-mail",
+  "subject_placeholder": "Sujet",
+  "message_placeholder": "Votre message",
+  "send_message": "Envoyer le message",
+  "sending": "Envoi...",
+  "success_message": "Message envoyé avec succès !",
+  "error_message": "Échec de l'envoi du message. Réessayez plus tard."
+},
+
           
 
-          cart: {
-            title: "Panier",
-            clear_cart: "Vider le panier",
-            category: "Catégorie",
-            color: "Couleur",
-            original: "Original",
-            qty: "Qté",
-            remove: "Supprimer",
-            empty: "Votre panier est vide !",
-            subtotal: "Sous-total",
-            proceed_to_checkout: "Passer à la caisse"
-          },
-          
-          checkout: {
-            title: "Paiement sécurisé",
-            payment_method: "Paiement à la livraison",
-            total_price: "Prix total :",
-            items: "Articles",
-            personal_details: "Informations personnelles",
-            full_name: "Nom complet",
-            email: "Adresse e-mail",
-            phone: "Numéro de téléphone",
-            shipping_address: "Adresse de livraison",
-            address: "Adresse / Rue",
-            city: "Ville",
-            country: "Pays",
-            state: "Région",
-            zipcode: "Code postal",
-            agree: "J'accepte les",
-            terms: "Conditions générales",
-            policy: "Conditions d'achat",
-            and: "et",
-            place_order: "Passer la commande",
-            processing: "Traitement de votre commande...",
-            order_confirmed: "Commande confirmée",
-            success_message: "Votre commande a été passée avec succès !",
-            go_to_orders: "Voir mes commandes",
-            error_title: "Erreur !",
-            error_message: "Échec du traitement de votre commande."
-          },
-          
-          footer: {
-            brand: "Wahret Zmen",
-            description: "Découvrez nos vêtements traditionnels tunisiens, fabriqués avec passion et authenticité.",
-            quickLinks: "Liens rapides",
-            home: "Accueil",
-            products: "Produits",
-            about: "À propos",
-            contact: "Contact",
-            contactUs: "Nous contacter",
-            location: "Souk Essouf, Tunis",
-            followUs: "Suivez-nous",
-            rights: "Tous droits réservés."
-          },
-          
-          news: {
-            section_title: "Actualités",
-            items: [
-              {
-                title: "Wahret Zmen par Sabri : L'élégance tunisienne traditionnelle",
-                description: "Wahret Zmen par Sabri est une boutique spécialisée dans les vêtements traditionnels tunisiens, réalisés à la main avec des broderies délicates en soie."
-              },
-              {
-                title: "Découvrez l'essence de la tradition tunisienne",
-                description: "Pour les amateurs de mode tunisienne authentique, Wahret Zmen par Sabri est une destination où tradition et créativité se rencontrent !"
-              },
-              {
-                title: "Nouvelle mission spatiale pour explorer des galaxies lointaines",
-                description: "Pour les amateurs de mode tunisienne authentique, Wahret Zmen par Sabri est une destination où tradition et créativité se rencontrent !"
-              }
-            ]
-          },
-          
-          // ✅ Stock and Product Terms
+         
+
+
+
           stock: "Stock",
           out_of_stock: "Rupture de stock",
           trending: "Tendance",
           color: "Couleur",
-          quantity: "Quantité",
+          quantity: "Qté",
           add_to_cart: "Ajouter au panier",
           unknown_product: "Produit inconnu",
           category: "Catégorie",
@@ -489,9 +417,39 @@ i18n
           selected: "Sélectionné",
           default: "Défaut",
           available_colors: "Couleurs disponibles",
-          
 
-          
+          news: {
+            section_title: "Actualités",
+            items: [
+              {
+                title: "Wahret Zmen par Sabri : Une boutique d'élégance tunisienne traditionnelle",
+                description: "Wahret Zmen par Sabri est une boutique spécialisée dans les vêtements traditionnels tunisiens, notamment les vêtements faits main avec des broderies délicates en fil de soie."
+              },
+              {
+                title: "Découvrez l'essence de la tradition tunisienne",
+                description: "Pour les amateurs de mode tunisienne authentique, Wahret Zmen par Sabri est une destination où la tradition rencontre la créativité !"
+              },
+              {
+                title: "Nouvelle mission spatiale visant à explorer des galaxies lointaines",
+                description: "Pour les amateurs de mode tunisienne authentique, Wahret Zmen par Sabri est une destination où la tradition rencontre la créativité !"
+              }
+            ]
+          },
+
+
+          footer: {
+            brand: "Wahret Zmen",
+            description: "Découvrez nos vêtements traditionnels tunisiens, fabriqués avec passion et authenticité.",
+            quickLinks: "Liens Rapides",
+            home: "Accueil",
+            products: "Produits",
+            about: "À Propos",
+            contact: "Contact",
+            contactUs: "Nous Contacter",
+            location: "Tunis, Tunisie",
+            followUs: "Suivez-nous",
+            rights: "Tous droits réservés.",
+          },
 
 
           search_input: {
@@ -623,9 +581,46 @@ i18n
 
 
          
-        
+          cart: {
+            title: "Panier",
+            clear_cart: "Vider le panier",
+            category: "Catégorie",
+            color: "Couleur",
+            original: "Original",
+            qty: "Qté",
+            remove: "Supprimer",
+            empty: "Votre panier est vide !",
+            subtotal: "Sous-total",
+            proceed_to_checkout: "Passer à la caisse"
+          },
           
-          
+          checkout: {
+            title: "Paiement sécurisé",
+            payment_method: "Paiement à la livraison",
+            total_price: "Prix total:",
+            items: "Articles",
+            personal_details: "Informations personnelles",
+            full_name: "Nom complet",
+            email: "Adresse e-mail",
+            phone: "Numéro de téléphone",
+            shipping_address: "Adresse de livraison",
+            address: "Adresse / Rue",
+            city: "Ville",
+            country: "Pays",
+            state: "Région",
+            zipcode: "Code postal",
+            agree: "J'accepte les",
+            terms: "Conditions générales",
+            policy: "Conditions d'achat",
+            and: "et",
+            place_order: "Passer la commande",
+            processing: "Traitement de votre commande...",
+            order_confirmed: "Commande confirmée",
+            success_message: "Votre commande a été passée avec succès!",
+            go_to_orders: "Voir les commandes",
+            error_title: "Erreur!",
+            error_message: "Échec de la commande"
+          }
           
 
           
