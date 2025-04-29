@@ -567,11 +567,11 @@ i18n
         translation: {
           
           
-          home: "Accueil",
-    products: "Produits",
-    "about-menu": "A propos", 
-    "contact-menu": "Contactez-nous",
-    "admin_dashboard":"Tableau de bord",
+          home: "الترحيب",
+    products: "الممنتوجات",
+    "about-menu": "حول وهرة الزّمن", 
+    "contact-menu": "اتّصل بنا",
+    "admin_dashboard":"لوحة التحكّم",
           
           search_input: {
             placeholder: "ابحث عن المنتجات..."
