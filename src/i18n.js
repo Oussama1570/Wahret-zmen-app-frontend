@@ -565,34 +565,34 @@ i18n
       
       ar: {
         translation: {
-          
-          
-          home: "الترحيب",
-    products: "الممنتوجات",
-    "about-menu": "حول وهرة الزّمن", 
-    "contact-menu": "اتّصل بنا",
-    "admin_dashboard":"لوحة التحكّم",
-          
+          navbar: {
+            brand: "وهرة الزمن", // Logo text
+          },
+          home: "الرئيسية",
+          products: "المنتجات",
+          "about-menu": "من نحن",
+          "contact-menu": "اتصل بنا",
+          admin_dashboard: "لوحة تحكم المدير",
+      
           search_input: {
             placeholder: "ابحث عن المنتجات..."
           },
           dashboard: "لوحة التحكم",
           orders: "الطلبات",
-          logout: "تسجيل خروج",
-          select_category: "اختر الفئة",
-          categories: {
-            all: "الكل",
-            men: "رجال",
-            women: "النساء",
-            children: "الأطفال",
-          },
-          product_filters: {
-            label: "اختيار المنتجات", // Arabic translation of the label
-            men: "رجال",
-            women: "نساء",
-            children: "أطفال",
-            "all": "الكل" , // Arabic translation for "All"
-          
+          logout: "تسجيل الخروج",
+      
+          footer: {
+            brand: "وهرة الزمن",
+            description: "ملابس تقليدية تونسية تجمع بين التراث والأناقة العصرية. موقعنا: سوق السوف، تونس.",
+            quickLinks: "روابط سريعة",
+            home: "الرئيسية",
+            products: "المنتجات",
+            about: "من نحن",
+            contact: "اتصل بنا",
+            contactUs: "اتصل بنا",
+            location: "سوق السوف، تونس",
+            followUs: "تابعونا",
+            rights: "جميع الحقوق محفوظة.",
           },
 
           home_title: "وهرة الزمن - الملابس التقليدية وبائعونا",
@@ -692,18 +692,7 @@ i18n
           },
           
 
-          footer: {
-            brand: "Wahret Zmen",
-            description: "ملابس تقليدية تونسية تمزج بين التراث والأناقة العصرية. تقع في الأسواق، تونس.",
-            quickLinks: "روابط سريعة",
-            products: "المنتجات",
-            about: "من نحن",
-            contact: "اتصل بنا",
-            contactUs: "Contactez-nous",
-            location: "الأسواق، شارع الصوف، تونس، تونس",
-            followUs: "تابعنا",
-            rights: "جميع الحقوق محفوظة."
-          },
+       
           
           register: {
             create_account: "إنشاء حساب جديد",
