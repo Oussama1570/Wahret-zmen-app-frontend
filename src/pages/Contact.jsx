@@ -3,8 +3,9 @@ import ContactForm from '../components/Contact-form.jsx';
 import "../Styles/StylesContact.css";
 import "../Styles/StylesContact-form.css";
 import FadeInSection from '../Animations/FadeInSection.jsx';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+
 
 const Contact = () => {
   const { t } = useTranslation();

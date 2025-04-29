@@ -307,14 +307,15 @@ i18n
         
       fr: {
         translation: {
-          "navbar": {
-            "brand": "Wahret Zmen"
+          navbar: {
+            brand: "Wahret Zmen"
           },
           home: "Accueil",
-    products: "Produits",
-    "about-menu": "À propos",  // ✅ as you asked
-    "contact-menu": "Contactez-nous",  // ✅ as you asked
-    "admin_dashboard":"Tableau de bord",
+          products: "Produits",
+          "about-menu": "À propos",
+          "contact-menu": "Contact",
+          admin_dashboard: "Tableau de bord",
+      
           search_input: {
             placeholder: "Rechercher des produits..."
           },
@@ -329,31 +330,33 @@ i18n
             children: "Enfants",
           },
           product_filters: {
-            label: "Sélectionner les produits", // French translation of the label
+            label: "Sélectionner les produits",
             men: "Hommes",
             women: "Femmes",
             children: "Enfants",
-            "all": "Tous",  // French translation for "All"
-},
-          
-
-          home_title: "Wahret Zmen - Vêtements traditionnels et nos vendeurs",
+            all: "Tous",
+          },
+      
+          home_title: "Wahret Zmen - Vêtements traditionnels & Nos vendeurs",
           home_meta_description: "Bienvenue chez Wahret Zmen, explorez notre collection de vêtements traditionnels, nos nouveautés et les dernières tendances.",
-          home_intro_html: "Bienvenue à la <strong>Boutique Wahret Zmen</strong>, où la tradition rencontre l'élégance. Explorez nos vêtements faits main, inspirés du riche patrimoine culturel tunisien. Découvrez une mode intemporelle mêlant histoire et raffinement moderne.",
-          home_banner_text: "Entrez dans la tradition avec élégance. La boutique Wahret Zmen vous propose une collection intemporelle de tenues tunisiennes authentiques, confectionnées avec passion et héritage.",
-          our_sellers: "Nos Vendeurs",
-          our_sellers_intro: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des Kaftans élégants aux Jebbas classiques, explorez la beauté du patrimoine dans chaque pièce.",
+          home_intro_html: "Bienvenue à la <strong>Boutique Wahret Zmen</strong>, où la tradition rencontre l'élégance. Découvrez nos vêtements faits main, inspirés du riche patrimoine culturel tunisien. Une mode intemporelle alliant histoire et modernité.",
+          home_banner_text: "Marchez dans la tradition avec élégance. Wahret Zmen vous propose une collection intemporelle de tenues tunisiennes authentiques, conçues avec passion et héritage.",
+      
+          our_sellers: "Nos vendeurs",
+          our_sellers_intro: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des caftans élégants aux jebbas classiques, explorez la beauté du patrimoine dans chaque pièce.",
+          our_sellers_intro_html: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des <strong>Caftans</strong> élégants aux <strong>Jebbas</strong> classiques, explorez la beauté du patrimoine dans chaque pièce.",
+      
           latest_news: "Actualités & Tendances",
-          latest_news_intro: "Restez informé des nouveautés de Wahret Zmen ! Découvrez nos nouvelles collections, conseils mode, et offres exclusives qui font vivre la tradition dans un monde moderne.",
+          latest_news_intro: "Restez informé(e) des dernières nouveautés de Wahret Zmen ! Découvrez nos nouvelles collections, conseils mode et offres exclusives valorisant la tradition dans un monde moderne.",
+      
           banner_img_alt: "Vêtements traditionnels tunisiens",
           banner_title: "Wahret Zmen par Sabri – Préserver l'héritage tunisien avec élégance",
-          banner_description: "Wahret Zmen est une boutique unique de vêtements traditionnels tunisiens située à El Aswak, Tunis, rue Essouf. La boutique propose une sélection soignée de vêtements tunisiens authentiques, dont la célèbre Jebba, réputée pour son artisanat raffiné et sa valeur culturelle.",
+          banner_description: "Wahret Zmen est une boutique unique de vêtements traditionnels tunisiens située à Souk Essouf, Tunis. Nous proposons une sélection soigneusement élaborée de vêtements authentiques, notamment la célèbre Jebba réputée pour sa finesse artisanale et sa valeur culturelle.",
+      
           discover_now: "Découvrir maintenant",
           wahret_zmen_collection: "Collection Wahret Zmen",
           select_category: "Sélectionner une catégorie",
           no_products_found: "Aucun produit trouvé.",
-          our_sellers_intro_html: "Découvrez notre collection de vêtements traditionnels, confectionnés avec soin et authenticité culturelle. Des <strong>Caftans</strong> élégants aux <strong>Jebbas</strong> classiques, explorez la beauté du patrimoine dans chaque pièce.",
-
           load_more: "Charger plus",
           products_page: {
             title: "Collection Wahret Zmen",

@@ -5,8 +5,9 @@ import AboutImage1 from "../../src/assets/About/About Img 1.webp";
 import AboutImage2 from "../../src/assets/About/About Img 2.webp";
 import AboutImage3 from "../../src/assets/About/About Img 3.webp";
 import AboutImage4 from "../../src/assets/About/About Img 4.webp";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+
 
 const About = () => {
   const { t } = useTranslation();

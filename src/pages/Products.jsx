@@ -4,11 +4,13 @@ import { useGetAllProductsQuery } from "../redux/features/products/productsApi.j
 import SelectorsPageProducts from "../components/SelectorProductsPage.jsx";
 import SearchInput from "../components/SearchInput.jsx";
 import "../Styles/StylesProducts.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 import FadeInSection from "../Animations/FadeInSection";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { productEventsActions } from "../redux/features/products/productEventsSlice.js";
+
+
 
 const WahretZmenLoader = () => (
   <div className="w-16 h-16 border-4 border-t-4 border-blue-500 border-solid rounded-full animate-spin mx-auto"></div>
