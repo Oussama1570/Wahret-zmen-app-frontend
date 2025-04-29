@@ -78,10 +78,9 @@ const Navbar = () => {
           </li>
           {token && (
             <li>
-              <Link to="/dashboard" className="dashboard-link small-dashboard-link">
-              <FiUser className="icon" />
+              <Link to="/dashboard" onClick={() => setIsMobileMenuOpen(false)}>
+                {t("admin_dashboard")}
               </Link>
-
             </li>
           )}
         </ul>
