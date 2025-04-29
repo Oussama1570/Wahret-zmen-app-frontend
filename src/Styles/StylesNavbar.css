@@ -402,15 +402,14 @@ html[dir="rtl"] .mobile-menu-btn {
     margin-top: 0;
   }
 
-  .dashboard-link {
-    font-size: 0.9rem;       /* smaller text */
-    padding: 4px 8px;         /* smaller padding */
-    line-height: 1.2;         /* reduce height impact */
-    max-width: 120px;         /* limit how wide it can go */
+  .dashboard-link.admin-only {
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    line-height: 1.1;
+    max-width: 100px;
     text-align: center;
-    white-space: normal;      /* allow text to wrap */
-    word-break: break-word;   /* break long Arabic words */
+    white-space: normal;
+    word-break: break-word;
+    display: inline-block;
   }
-  
 }
-

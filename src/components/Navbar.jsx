@@ -126,9 +126,10 @@ const Navbar = () => {
 
             </div>
           ) : token ? (
-            <Link to="/dashboard" className="dashboard-link">
-              {t("admin_dashboard")}
+            <Link to="/dashboard" className="dashboard-link admin-only">
+            {t("admin_dashboard")}
             </Link>
+
           ) : (
             <Link to="/login" className="login-icon">
               <FiUser className="icon" />
