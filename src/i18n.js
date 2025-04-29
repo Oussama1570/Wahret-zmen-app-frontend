@@ -581,10 +581,10 @@ i18n
           logout: "تسجيل خروج",
           select_category: "Selectionnez une catégorie",
           categories: {
-            all: "Tous",
-            men: "Hommes",
-            women: "Femmes",
-            children: "Enfants",
+            all: "الكل",
+            men: "رجال",
+            women: "النساء",
+            children: "الأطفال",
           },
           product_filters: {
             label: "اختيار المنتجات", // Arabic translation of the label
