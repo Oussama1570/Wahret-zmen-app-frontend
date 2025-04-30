@@ -165,6 +165,7 @@ const OrderPage = () => {
   <span className="break-all inline-block">{order.email}</span>
 </p>
 
+
   <p className="text-gray-700">
     <span className="font-medium">{t("ordersPage.phone")}:</span> {order.phone}
   </p>

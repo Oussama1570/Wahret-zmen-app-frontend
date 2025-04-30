@@ -9,6 +9,8 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { productEventsActions } from "../../../redux/features/products/productEventsSlice";
+import "../../../Styles/StylesManageProducts.css";
+
 
 const ManageProducts = () => {
   const { data: products = [], isLoading, isError, refetch } = useGetAllProductsQuery();
@@ -198,10 +200,10 @@ const ManageProducts = () => {
                       </td>
   
                       <td className="p-4 border border-gray-300 align-middle">
-                      <div className="flex gap-2 sm:gap-4 min-w-[110px]">
+                      <div className="flex gap-2 sm:gap-4">
   <Link
     to={`/dashboard/edit-product/${product._id}`}
-    className="bg-yellow-400 text-white px-4 py-2 rounded font-medium hover:bg-yellow-500 w-full sm:w-auto text-center whitespace-nowrap"
+    className="action-button btn-edit"
   >
     Modifier
   </Link>
@@ -209,11 +211,14 @@ const ManageProducts = () => {
   <button
     onClick={() => handleDeleteProduct(product._id)}
     disabled={deleting}
-    className="bg-red-500 text-white px-4 py-2 rounded font-medium hover:bg-red-700 w-full sm:w-auto text-center whitespace-nowrap"
+    className="action-button btn-delete"
   >
     {deleting ? "Suppression..." : "Supprimer"}
   </button>
 </div>
+
+
+
 
                       </td>
                     </tr>
