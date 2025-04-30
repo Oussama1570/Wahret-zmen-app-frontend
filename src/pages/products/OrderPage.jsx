@@ -156,8 +156,10 @@ const OrderPage = () => {
                 </div>
 
                 <h2 className="font-semibold text-gray-900">
-                  {t("ordersPage.orderId")}: {order._id.slice(0, 8)}...
-                </h2>
+  {t("ordersPage.orderId")}: {order._id.slice(0, 8)}
+</h2>
+
+
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <p className="text-gray-700 break-words max-w-full w-full text-wrap leading-snug">
