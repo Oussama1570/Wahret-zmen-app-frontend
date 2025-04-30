@@ -162,9 +162,11 @@ const OrderPage = () => {
                 <p className="text-gray-700">
                   {t("ordersPage.name")}: {order.name}
                 </p>
-                <p className="text-gray-700">
-                  {t("ordersPage.email")}: {order.email}
-                </p>
+                <p className="text-gray-700 break-words max-w-full overflow-hidden">
+  <span className="font-medium">{t("ordersPage.email")}:</span>{" "}
+  <span className="break-all">{order.email}</span>
+</p>
+
                 <p className="text-gray-700">
                   {t("ordersPage.phone")}: {order.phone}
                 </p>
