@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { FaTachometerAlt, FaPlusCircle, FaTools, FaBars, FaSignOutAlt } from "react-icons/fa";
 import { MdProductionQuantityLimits } from "react-icons/md";
@@ -34,6 +34,22 @@ const DashboardLayout = () => {
       navigate("/");
     }
   };
+
+
+  useEffect(() => {
+    // ✅ Force LTR when inside /dashboard route
+    document.documentElement.dir = "ltr";
+  
+    // ✅ Optional: Reset on unmount (if user leaves dashboard)
+    return () => {
+      const savedLang = localStorage.getItem("language");
+      if (savedLang === "ar") {
+        document.documentElement.dir = "rtl";
+      } else {
+        document.documentElement.dir = "ltr";
+      }
+    };
+  }, []);
 
   return (
     <section dir="ltr" className="flex min-h-screen bg-gray-100 overflow-hidden">

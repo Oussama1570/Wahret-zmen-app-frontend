@@ -142,7 +142,10 @@ const AdminOrdersProgress = () => {
     }
   };
   
-
+  useEffect(() => {
+    document.documentElement.dir = "ltr";
+  }, []);
+  
 
   const handleEdit = (productKey) => {
     setEditingProductKey(productKey);

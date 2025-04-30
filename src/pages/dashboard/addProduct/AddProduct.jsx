@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useAddProductMutation } from "../../../redux/features/products/productsApi";
 import Swal from "sweetalert2";
@@ -117,6 +117,10 @@ const AddProduct = () => {
       Swal.fire("Erreur!", "Échec de l'ajout du produit.", "error");
     }
   };
+  
+  useEffect(() => {
+    document.documentElement.dir = "ltr";
+  }, []);
   
 
 

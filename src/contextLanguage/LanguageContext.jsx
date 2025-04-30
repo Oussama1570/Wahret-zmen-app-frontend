@@ -14,9 +14,14 @@ export const LanguageProvider = ({ children }) => {
     i18n.changeLanguage(lang);
     localStorage.setItem("language", lang);
     document.documentElement.lang = lang;
-    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
-
+  
+    // ✅ Only apply RTL globally *if not in the dashboard*
+    const isDashboard = window.location.pathname.includes("/dashboard");
+    if (!isDashboard) {
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    }
   };
+  
 
   // Apply saved language on app load
   useEffect(() => {

@@ -141,7 +141,10 @@ const UpdateProduct = () => {
     }
   };
 
-
+  useEffect(() => {
+    document.documentElement.dir = "ltr";
+  }, []);
+  
 
 
 if (isLoading) return <Loading />;

@@ -61,6 +61,11 @@ const ManageProducts = () => {
       }
     }
   };
+
+  useEffect(() => {
+    document.documentElement.dir = "ltr";
+  }, []);
+  
   return (
     <section className="p-4 bg-gray-100 min-h-screen font-sans">
       {/* 🔍 Dual Search Inputs */}
@@ -108,16 +113,17 @@ const ManageProducts = () => {
   
             {!isLoading && products?.length > 0 ? (
               products
-                .filter((product) => {
-                  const lowerSearch = searchTerm.toLowerCase();
-                  const matchesTitle =
-                    product.title?.toLowerCase().includes(lowerSearch) ||
-                    product.translations?.[lang]?.title?.toLowerCase().includes(lowerSearch);
-  
-                  const matchesId = product._id?.toLowerCase().includes(searchId.toLowerCase());
-  
-                  return matchesTitle && matchesId;
-                })
+              .filter((product) => {
+                const lowerSearch = searchTerm.toLowerCase();
+                const matchesTitle =
+                  product.title?.toLowerCase().includes(lowerSearch) ||
+                  product.translations?.[lang]?.title?.toLowerCase().includes(lowerSearch);
+              
+                const matchesId = product._id?.toLowerCase().includes(searchId.toLowerCase());
+              
+                return matchesTitle && matchesId;
+              })
+              
                 .map((product, index) => {
                   const totalStock = product.colors?.reduce(
                     (sum, color) => sum + (color?.stock || 0),
