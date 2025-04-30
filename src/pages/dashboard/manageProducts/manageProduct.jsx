@@ -198,21 +198,23 @@ const ManageProducts = () => {
                       </td>
   
                       <td className="p-4 border border-gray-300 align-middle">
-                        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
-                          <Link
-                            to={`/dashboard/edit-product/${product._id}`}
-                            className="bg-blue-500 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 w-full sm:w-auto text-center"
-                          >
-                            Modifier
-                          </Link>
-                          <button
-                            onClick={() => handleDeleteProduct(product._id)}
-                            disabled={deleting}
-                            className="bg-red-500 text-white px-4 py-2 rounded font-medium hover:bg-red-700 w-full sm:w-auto"
-                          >
-                            {deleting ? "Suppression..." : "Supprimer"}
-                          </button>
-                        </div>
+                      <div className="flex gap-2 sm:gap-4 min-w-[110px]">
+  <Link
+    to={`/dashboard/edit-product/${product._id}`}
+    className="bg-yellow-400 text-white px-4 py-2 rounded font-medium hover:bg-yellow-500 w-full sm:w-auto text-center whitespace-nowrap"
+  >
+    Modifier
+  </Link>
+
+  <button
+    onClick={() => handleDeleteProduct(product._id)}
+    disabled={deleting}
+    className="bg-red-500 text-white px-4 py-2 rounded font-medium hover:bg-red-700 w-full sm:w-auto text-center whitespace-nowrap"
+  >
+    {deleting ? "Suppression..." : "Supprimer"}
+  </button>
+</div>
+
                       </td>
                     </tr>
                   );

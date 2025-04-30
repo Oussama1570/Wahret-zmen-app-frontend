@@ -160,10 +160,11 @@ const OrderPage = () => {
                 </h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-  <p className="text-gray-700 break-words">
-    <span className="font-medium">{t("ordersPage.email")}:</span>{" "}
-    <span className="break-all">{order.email}</span>
-  </p>
+                <p className="text-gray-700 break-words max-w-full w-full text-wrap leading-snug">
+  <span className="font-medium">{t("ordersPage.email")}:</span>{" "}
+  <span className="break-all inline-block">{order.email}</span>
+</p>
+
   <p className="text-gray-700">
     <span className="font-medium">{t("ordersPage.phone")}:</span> {order.phone}
   </p>
