@@ -41,6 +41,12 @@
   font-weight: bold;
   font-family: 'Cairo', sans-serif;
   margin-inline-end: 20px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: #A67C52; /* warm brown (Wahret Zmen tone) */
+  transform: translateY(-2px);
 }
 
 .logo-img {
@@ -49,12 +55,19 @@
   object-fit: cover;
   border-radius: 50%;
   margin-inline-end: 12px;
+  transition: transform 0.4s ease;
+}
+
+.logo:hover .logo-img {
+  transform: rotate(-5deg) scale(1.05);
 }
 
 .logo-text {
   font-size: 1.6rem;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
+
 
 /* ========================== */
 /* 📁 Navigation Links */
