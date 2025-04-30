@@ -196,14 +196,26 @@ const CheckoutPage = () => {
               </div>
             </div>
     {/* Terms and Place Order */}
-<div className="md:col-span-2 flex flex-col items-center mt-4 w-full">
-  <div
-    className={`w-full flex items-center ${
-      i18n.language === "ar"
-        ? "flex-row-reverse justify-end gap-2"  // ✅ checkbox before text + align both to right
-        : "flex-row justify-start gap-2"
-    }`}
-  >
+    <div
+  className={`w-full flex ${
+    i18n.language === "ar"
+      ? "flex-row-reverse justify-end gap-2"
+      : "flex-row justify-start gap-2"
+  } items-center`} // ✅ ensures checkbox and text stay on same line vertically
+>
+  <input
+    onChange={(e) => setIsChecked(e.target.checked)}
+    type="checkbox"
+    className="form-checkbox h-5 w-5 text-[#A67C52] focus:ring-[#A67C52]"
+  />
+  <label className="text-gray-600 text-sm leading-5">
+    {t("checkout.agree")}{" "}
+    <Link className="text-[#A67C52] underline">{t("checkout.terms")}</Link>{" "}
+    {t("checkout.and")}{" "}
+    <Link className="text-[#A67C52] underline">{t("checkout.policy")}</Link>.
+  </label>
+</div>
+
     <input
       onChange={(e) => setIsChecked(e.target.checked)}
       type="checkbox"

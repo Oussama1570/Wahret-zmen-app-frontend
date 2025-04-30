@@ -159,17 +159,16 @@ const OrderPage = () => {
                   {t("ordersPage.orderId")}: {order._id.slice(0, 8)}...
                 </h2>
 
-                <p className="text-gray-700">
-                  {t("ordersPage.name")}: {order.name}
-                </p>
-                <p className="text-gray-700 break-words max-w-full overflow-hidden">
-  <span className="font-medium">{t("ordersPage.email")}:</span>{" "}
-  <span className="break-all">{order.email}</span>
-</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+  <p className="text-gray-700 break-words">
+    <span className="font-medium">{t("ordersPage.email")}:</span>{" "}
+    <span className="break-all">{order.email}</span>
+  </p>
+  <p className="text-gray-700">
+    <span className="font-medium">{t("ordersPage.phone")}:</span> {order.phone}
+  </p>
+</div>
 
-                <p className="text-gray-700">
-                  {t("ordersPage.phone")}: {order.phone}
-                </p>
                 <p className="text-lg font-semibold text-gray-800">
                   {t("ordersPage.total")}:{" "}
                   <span className="text-green-600">${order.totalPrice}</span>
