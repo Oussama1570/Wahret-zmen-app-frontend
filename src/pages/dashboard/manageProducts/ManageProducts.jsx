@@ -25,6 +25,8 @@ const ManageProducts = () => {
   };
 
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchId, setSearchId] = useState("");
+
 
 
   useEffect(() => {
@@ -59,22 +61,27 @@ const ManageProducts = () => {
       }
     }
   };
-
-  return  (
+  return (
     <section className="p-4 bg-gray-100 min-h-screen font-sans">
-      {/* 🔵 Search Input */}
-      <div className="flex justify-start mb-4">
-  <input
-    type="text"
-    placeholder="Rechercher un produit..."
-    value={searchTerm}
-    onChange={(e) => setSearchTerm(e.target.value)}
-    className="p-2 border border-gray-300 rounded-md w-full max-w-sm"
-  />
-</div>
-
+      {/* 🔍 Dual Search Inputs */}
+      <div className="flex flex-col md:flex-row gap-4 mb-4">
+        <input
+          type="text"
+          placeholder="🔍 Rechercher par titre du produit..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="p-2 border border-gray-300 rounded-md w-full md:max-w-sm"
+        />
+        <input
+          type="text"
+          placeholder="🔎 Rechercher par ID du produit..."
+          value={searchId}
+          onChange={(e) => setSearchId(e.target.value)}
+          className="p-2 border border-gray-300 rounded-md w-full md:max-w-sm"
+        />
+      </div>
   
-      {/* 🔵 Products Table */}
+      {/* 📦 Products Table */}
       <div className="w-full overflow-x-auto">
         <table className="min-w-[900px] w-full text-left border-collapse border border-gray-300">
           <thead>
@@ -101,102 +108,109 @@ const ManageProducts = () => {
   
             {!isLoading && products?.length > 0 ? (
               products
-                .filter((product) =>
-                  product.title.toLowerCase().includes(searchTerm.toLowerCase())
-                )
+                .filter((product) => {
+                  const lowerSearch = searchTerm.toLowerCase();
+                  const matchesTitle =
+                    product.title?.toLowerCase().includes(lowerSearch) ||
+                    product.translations?.[lang]?.title?.toLowerCase().includes(lowerSearch);
+  
+                  const matchesId = product._id?.toLowerCase().includes(searchId.toLowerCase());
+  
+                  return matchesTitle && matchesId;
+                })
                 .map((product, index) => {
                   const totalStock = product.colors?.reduce(
                     (sum, color) => sum + (color?.stock || 0),
                     0
                   );
-
-                return (
-                  <tr key={product._id} className="hover:bg-gray-100 transition">
-                    <td className="p-4 border border-gray-300 align-middle">{index + 1}</td>
-
-                    <td className="p-4 border border-gray-300 align-middle text-sm text-gray-600">
-                      {product._id.slice(0, 8)}...
-                    </td>
-
-                    <td className="p-4 border border-gray-300">
-                      <div className="flex flex-col items-center justify-center text-center">
-                        <span className="font-medium text-gray-800 mt-2 text-sm md:text-base break-words">
-                          {product.title}
+  
+                  return (
+                    <tr key={product._id} className="hover:bg-gray-100 transition">
+                      <td className="p-4 border border-gray-300 align-middle">{index + 1}</td>
+  
+                      <td className="p-4 border border-gray-300 align-middle text-sm text-gray-600">
+                        {product._id.slice(0, 8)}...
+                      </td>
+  
+                      <td className="p-4 border border-gray-300">
+                        <div className="flex flex-col items-center justify-center text-center">
+                          <span className="font-medium text-gray-800 mt-2 text-sm md:text-base break-words">
+                            {product.title}
+                          </span>
+                          <img
+                            src={getImgUrl(product.coverImage)}
+                            alt={product.title}
+                            className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover border mt-2"
+                          />
+                        </div>
+                      </td>
+  
+                      <td className="p-4 border border-gray-300 align-middle capitalize text-gray-700">
+                        {categoryMapping[product.category] || "Non classifié"}
+                      </td>
+  
+                      <td className="p-4 border border-gray-300 align-middle">
+                        <div className="flex flex-wrap items-center gap-4">
+                          {product.colors?.length > 0 ? (
+                            [...product.colors]
+                              .sort((a, b) => {
+                                const aName = a.colorName?.[lang] || a.colorName?.en || "";
+                                const bName = b.colorName?.[lang] || b.colorName?.en || "";
+                                return aName.localeCompare(bName);
+                              })
+                              .map((color, idx) => (
+                                <div key={idx} className="flex items-center gap-2">
+                                  <div
+                                    className="w-4 h-4 rounded-full border"
+                                    style={{ backgroundColor: color.hex || "#fff" }}
+                                  />
+                                  <span className="text-sm text-gray-700">
+                                    {color.colorName?.[lang] || color.colorName?.en || "Défaut"}
+                                  </span>
+                                </div>
+                              ))
+                          ) : (
+                            <span className="text-gray-500">Par défaut</span>
+                          )}
+                        </div>
+                      </td>
+  
+                      <td className="p-4 border border-gray-300 align-middle text-green-600 font-semibold">
+                        ${product.newPrice}
+                      </td>
+  
+                      <td className="p-4 border border-gray-300 align-middle">
+                        <span
+                          className={
+                            totalStock === 0
+                              ? "text-red-500 font-medium"
+                              : "text-yellow-600 font-medium"
+                          }
+                        >
+                          {totalStock > 0 ? `${totalStock} en stock` : "Rupture de stock"}
                         </span>
-                        <img
-                          src={getImgUrl(product.coverImage)}
-                          alt={product.title}
-                          className="w-16 h-16 md:w-20 md:h-20 rounded-lg object-cover border mt-2"
-                        />
-                      </div>
-                    </td>
-
-                    <td className="p-4 border border-gray-300 align-middle capitalize text-gray-700">
-                      {categoryMapping[product.category] || "Non classifié"}
-                    </td>
-
-                    <td className="p-4 border border-gray-300 align-middle">
-                      <div className="flex flex-wrap items-center gap-4">
-                        {product.colors?.length > 0 ? (
-                          [...product.colors]
-                            .sort((a, b) => {
-                              const aName = a.colorName?.[lang] || a.colorName?.en || "";
-                              const bName = b.colorName?.[lang] || b.colorName?.en || "";
-                              return aName.localeCompare(bName);
-                            })
-                            .map((color, idx) => (
-                              <div key={idx} className="flex items-center gap-2">
-                                <div
-                                  className="w-4 h-4 rounded-full border"
-                                  style={{ backgroundColor: color.hex || "#fff" }}
-                                />
-                                <span className="text-sm text-gray-700">
-                                  {color.colorName?.[lang] || color.colorName?.en || "Défaut"}
-                                </span>
-                              </div>
-                            ))
-                        ) : (
-                          <span className="text-gray-500">Par défaut</span>
-                        )}
-                      </div>
-                    </td>
-
-                    <td className="p-4 border border-gray-300 align-middle text-green-600 font-semibold">
-                      ${product.newPrice}
-                    </td>
-
-                    <td className="p-4 border border-gray-300 align-middle">
-                      <span
-                        className={
-                          totalStock === 0
-                            ? "text-red-500 font-medium"
-                            : "text-yellow-600 font-medium"
-                        }
-                      >
-                        {totalStock > 0 ? `${totalStock} en stock` : "Rupture de stock"}
-                      </span>
-                    </td>
-
-                    <td className="p-4 border border-gray-300 align-middle">
-                      <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
-                        <Link
-                          to={`/dashboard/edit-product/${product._id}`}
-                          className="bg-blue-500 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 w-full sm:w-auto text-center"
-                        >
-                          Modifier
-                        </Link>
-                        <button
-                          onClick={() => handleDeleteProduct(product._id)}
-                          disabled={deleting}
-                          className="bg-red-500 text-white px-4 py-2 rounded font-medium hover:bg-red-700 w-full sm:w-auto"
-                        >
-                          {deleting ? "Suppression..." : "Supprimer"}
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })
+                      </td>
+  
+                      <td className="p-4 border border-gray-300 align-middle">
+                        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
+                          <Link
+                            to={`/dashboard/edit-product/${product._id}`}
+                            className="bg-blue-500 text-white px-4 py-2 rounded font-medium hover:bg-blue-700 w-full sm:w-auto text-center"
+                          >
+                            Modifier
+                          </Link>
+                          <button
+                            onClick={() => handleDeleteProduct(product._id)}
+                            disabled={deleting}
+                            className="bg-red-500 text-white px-4 py-2 rounded font-medium hover:bg-red-700 w-full sm:w-auto"
+                          >
+                            {deleting ? "Suppression..." : "Supprimer"}
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })
             ) : (
               !isLoading && (
                 <tr>
@@ -210,6 +224,7 @@ const ManageProducts = () => {
         </table>
       </div>
     </section>
+    
   );
 };
 

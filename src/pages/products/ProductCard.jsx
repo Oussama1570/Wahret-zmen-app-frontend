@@ -12,7 +12,11 @@ const ProductCard = ({ product }) => {
   const lang = i18n.language;
   const [quantity, setQuantity] = useState(1);
 
-  if (!product) return null; // ✅ Prevent crash if product is undefined
+  // ✅ Zoom state
+  const [zoomPosition, setZoomPosition] = useState({ x: 50, y: 50 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  if (!product) return null;
 
   const title =
     product?.translations?.[lang]?.title ||
@@ -30,9 +34,7 @@ const ProductCard = ({ product }) => {
     t("default");
 
   const displayedStock =
-    product?.colors?.[0]?.stock ??
-    product?.stockQuantity ??
-    0;
+    product?.colors?.[0]?.stock ?? product?.stockQuantity ?? 0;
 
   const handleQuantityChange = (e) => {
     const value = Number(e.target.value);
@@ -61,22 +63,48 @@ const ProductCard = ({ product }) => {
     }
   };
 
+  // 🖱️ Zoom handlers (hover only)
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setZoomPosition({ x, y });
+  };
+
+  const handleMouseEnter = () => setIsHovering(true);
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    setZoomPosition({ x: 50, y: 50 });
+  };
+
+
+
+
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden p-4 transition-transform duration-300 hover:scale-105 flex flex-col justify-between text-center w-full max-w-xs mx-auto">
       <div className="relative w-full h-52 border rounded-md overflow-hidden group">
         <Link to={`/products/${product._id}`}>
-          <img
-            src={getImgUrl(product?.coverImage)}
-            alt={title}
-            className="w-full h-full object-cover p-2 cursor-pointer transition-transform duration-300 group-hover:scale-110"
-          />
+          <div className="w-full h-full">
+            <img
+              src={getImgUrl(product?.coverImage)}
+              alt={title}
+              onMouseEnter={handleMouseEnter}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              className="w-full h-full object-cover p-2 cursor-zoom-in transition-transform duration-300"
+              style={{
+                transform: isHovering ? "scale(2)" : "scale(1)",
+                transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
+              }}
+            />
+          </div>
         </Link>
 
-        {/* 📍 Badges for mobile and desktop */}
+        {/* 📍 Stock & Trending badges */}
         <>
-          {/* 📱 Mobile: stock + tendances stacked top-left */}
+          {/* 📱 Mobile */}
           <div className="absolute top-2 left-2 flex flex-col gap-2 md:hidden">
-            {/* Stock badge */}
             <div
               className={`px-2 py-1 text-xs font-bold rounded-full ${
                 displayedStock > 0 ? "bg-green-500" : "bg-red-500"
@@ -84,8 +112,6 @@ const ProductCard = ({ product }) => {
             >
               {displayedStock > 0 ? `${t("stock")}: ${displayedStock}` : t("out_of_stock")}
             </div>
-
-            {/* Tendance badge */}
             {product.trending && (
               <div className="px-2 py-1 text-xs font-bold rounded-full bg-red-500 text-white">
                 {t("trending")}
@@ -93,9 +119,8 @@ const ProductCard = ({ product }) => {
             )}
           </div>
 
-          {/* 💻 Desktop: stock left, tendances right */}
+          {/* 💻 Desktop */}
           <div className="hidden md:flex justify-between items-start p-2 absolute top-0 left-0 right-0">
-            {/* Stock badge */}
             <div
               className={`px-2 py-1 text-xs font-bold rounded-full ${
                 displayedStock > 0 ? "bg-green-500" : "bg-red-500"
@@ -103,8 +128,6 @@ const ProductCard = ({ product }) => {
             >
               {displayedStock > 0 ? `${t("stock")}: ${displayedStock}` : t("out_of_stock")}
             </div>
-
-            {/* Tendance badge */}
             {product.trending && (
               <div className="px-2 py-1 text-xs font-bold rounded-full bg-red-500 text-white">
                 {t("trending")}
@@ -185,5 +208,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-
-
