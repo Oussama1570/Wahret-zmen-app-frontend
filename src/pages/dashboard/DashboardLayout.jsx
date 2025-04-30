@@ -25,8 +25,8 @@ const DashboardLayout = () => {
     if (result.isConfirmed) {
       localStorage.removeItem('token');
       Swal.fire({
-        title: "Déconnecté !",
-        text: "La session administrateur a été terminée avec succès.",
+        title: "Déconnecté ",
+        text: "La session administrateur a été terminée avec succès",
         icon: "success",
         confirmButtonColor: "#8B5C3E",
         timer: 2000,

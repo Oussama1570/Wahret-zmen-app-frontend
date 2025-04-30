@@ -12,7 +12,8 @@ const AdminLogin = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === "ar"; // Detect Arabic language
+  const isRTL = false; // Always use LTR, even for Arabic
+
 
   const showSuccessAlert = (title, text) => {
     Swal.fire({
@@ -65,7 +66,7 @@ const AdminLogin = () => {
 
   return (
     <div
-      dir={isRTL ? "rtl" : "ltr"} 
+       
       className="flex justify-center items-center min-h-screen bg-[#F4EEE0]"
     >
       <div className="w-full max-w-md bg-white p-8 shadow-lg rounded-lg">
@@ -128,3 +129,4 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
+

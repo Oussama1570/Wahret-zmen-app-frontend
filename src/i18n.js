@@ -424,7 +424,7 @@ i18n
             session_expired_text: "Veuillez vous reconnecter.",
             enter_dashboard: "Accéder au tableau de bord",
             try_again: "Réessayer",
-            rights: "Tous droits réservés."
+            rights: "Tous droits réservés." 
           },
           
          userDashboard: {
@@ -725,27 +725,27 @@ i18n
             title: "تسجيل دخول المدير",
             username_label: "اسم المستخدم",
             username_placeholder: "أدخل اسم المستخدم",
-            username_required: "اسم المستخدم مطلوب.",
+            username_required: "! اسم المستخدم مطلوب",
             password_label: "كلمة المرور",
             password_placeholder: "أدخل كلمة المرور",
-            password_required: "كلمة المرور مطلوبة.",
+            password_required: " .كلمة المرور مطلوبة",
             login_btn: "تسجيل الدخول",
-            success_title: "تم تسجيل دخول المدير بنجاح!",
-            success_text: "مرحبًا بك في لوحة التحكم.",
+            success_title: "! تم تسجيل دخول المدير بنجاح",
+            success_text: " .مرحبًا بك في لوحة التحكم",
             error_title: "فشل تسجيل الدخول",
             error_text: "يرجى إدخال اسم مستخدم وكلمة مرور صحيحة.",
             session_expired_title: "انتهت الجلسة",
             session_expired_text: "يرجى تسجيل الدخول مرة أخرى.",
             enter_dashboard: "دخول لوحة التحكم",
             try_again: "أعد المحاولة",
-            rights: "جميع الحقوق محفوظة."
+            rights: " .جميع الحقوق محفوظة"
           },
           
 
 
           userDashboard: {
             title: "لوحة التحكم الخاصة بي - وهرة الزمن",
-            welcome: "مرحباً، {{name}}!",
+            welcome: "! مرحباً، {{name}}",
             overview: "إليك نظرة عامة على طلباتك الأخيرة.",
             yourOrders: "طلباتك",
             orderId: "رقم الطلب",
@@ -764,36 +764,36 @@ i18n
           ordersPage: {
             title: "طلباتي",
             yourOrders: "طلباتك",
-            noOrders: "لا توجد طلبات!",
+            noOrders: "! لا توجد طلبات",
             orderNumber: "الطلب رقم",
             orderId: "رقم الطلب",
             name: "الاسم",
             email: "البريد الإلكتروني",
             phone: "الهاتف",
             total: "السعر الإجمالي",
-            orderedProducts: "المنتجات المطلوبة:",
+            orderedProducts: " :المنتجات المطلوبة",
             quantity: "الكمية",
             color: "اللون",
             original: "المنتج الأصلي",
             noTitle: "بدون عنوان",
             removeProduct: "إزالة المنتج",
             deleteOrder: "حذف الطلب",
-            deleting: "جارٍ الحذف...",
+            deleting: "... جارٍ الحذف ",
             pleaseLogin: "يرجى تسجيل الدخول لعرض طلباتك.",
             confirmDeleteTitle: "هل أنت متأكد؟",
-            confirmDeleteText: "لا يمكن التراجع عن هذا الإجراء. سيتم حذف طلبك نهائيًا.",
+            confirmDeleteText: " .يمكن التراجع عن هذا الإجراء. سيتم حذف طلبك نهائيًا",
             confirmDeleteBtn: "نعم، احذفه!",
             deleted: "تم الحذف!",
-            orderDeleted: "تم حذف طلبك.",
+            orderDeleted: " .تم حذف طلبك",
             error: "خطأ",
-            orderDeleteFailed: "فشل في حذف الطلب. حاول مرة أخرى.",
+            orderDeleteFailed: " .فشل في حذف الطلب. حاول مرة أخرى",
             removeQuantityTitle: "إزالة كمية",
-            removeQuantityLabel: "لديك {{max}} في طلبك. أدخل الكمية المراد إزالتها:",
+            removeQuantityLabel: " :لديك {{max}} في طلبك. أدخل الكمية المراد إزالتها",
             removeBtn: "إزالة",
             cancelBtn: "إلغاء",
             removed: "تمت الإزالة!",
-            productRemoved: "تمت إزالة {{qty}} عنصر(عناصر) من الطلب.",
-            productRemoveFailed: "فشل في إزالة المنتج. حاول مرة أخرى."
+            productRemoved: " .تمت إزالة {{qty}} عنصر(عناصر) من الطلب",
+            productRemoveFailed: " .فشل في إزالة المنتج. حاول مرة أخرى"
           },
           cart: {
             title: "عربة التسوق",
