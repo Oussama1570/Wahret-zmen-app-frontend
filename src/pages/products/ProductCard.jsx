@@ -8,6 +8,7 @@ import { addToCart } from "../../redux/features/cart/cartSlice";
 
 
 
+
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();

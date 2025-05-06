@@ -121,4 +121,29 @@
       transform: translateY(0);
     }
   }
+
+  
+  /* Fade-in from bottom with a soft rise */
+.fade-in-bottom {
+    opacity: 0;
+    animation: fadeInBottom 0.8s ease forwards;
+  }
+  
+  @keyframes fadeInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hide before scroll */
+  .hidden-before-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+  }
   
