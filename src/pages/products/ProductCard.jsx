@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { getImgUrl } from "../../utils/getImgUrl";
 import { addToCart } from "../../redux/features/cart/cartSlice";
 
+
+
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
@@ -82,76 +84,75 @@ const ProductCard = ({ product }) => {
 
 
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden p-4 transition-transform duration-300 hover:scale-105 flex flex-col justify-between text-center w-full max-w-xs mx-auto">
-      <div className="relative w-full h-52 border rounded-md overflow-hidden group">
-        <Link to={`/products/${product._id}`}>
-          <div className="w-full h-full">
-            <img
-              src={getImgUrl(product?.coverImage)}
-              alt={title}
-              onMouseEnter={handleMouseEnter}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
-              className="w-full h-full object-cover p-2 cursor-zoom-in transition-transform duration-300"
-              style={{
-                transform: isHovering ? "scale(2)" : "scale(1)",
-                transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
-              }}
-            />
-          </div>
+    <div className="product-card group relative bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-[1.03] max-w-xs w-full mx-auto">
+      <div className="relative w-full h-52 overflow-hidden">
+        <Link to={`/products/${product._id}`} className="block w-full h-full">
+          <img
+            src={getImgUrl(product?.coverImage)}
+            alt={title}
+            onMouseEnter={handleMouseEnter}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            className={`w-full h-full object-contain p-2 transition-transform duration-500 ${
+              isHovering ? "cursor-wz-zoom" : "cursor-default"
+            }`}
+            
+            style={{
+              transform: isHovering ? "scale(2)" : "scale(1)",
+              transformOrigin: `${zoomPosition.x}% ${zoomPosition.y}%`,
+            }}
+          />
         </Link>
-
-        {/* 📍 Stock & Trending badges */}
-        <>
-          {/* 📱 Mobile */}
-          <div className="absolute top-2 left-2 flex flex-col gap-2 md:hidden">
-            <div
-              className={`px-2 py-1 text-xs font-bold rounded-full ${
-                displayedStock > 0 ? "bg-green-500" : "bg-red-500"
-              } text-white`}
-            >
-              {displayedStock > 0 ? `${t("stock")}: ${displayedStock}` : t("out_of_stock")}
-            </div>
-            {product.trending && (
-              <div className="px-2 py-1 text-xs font-bold rounded-full bg-red-500 text-white">
-                {t("trending")}
-              </div>
-            )}
-          </div>
-
-          {/* 💻 Desktop */}
-          <div className="hidden md:flex justify-between items-start p-2 absolute top-0 left-0 right-0">
-            <div
-              className={`px-2 py-1 text-xs font-bold rounded-full ${
-                displayedStock > 0 ? "bg-green-500" : "bg-red-500"
-              } text-white`}
-            >
-              {displayedStock > 0 ? `${t("stock")}: ${displayedStock}` : t("out_of_stock")}
-            </div>
-            {product.trending && (
-              <div className="px-2 py-1 text-xs font-bold rounded-full bg-red-500 text-white">
-                {t("trending")}
-              </div>
-            )}
-          </div>
-        </>
+  
+        {/* Stock + Trending */}
+        <div className="absolute top-2 left-2 flex flex-col gap-1">
+          <span
+            className={`text-xs font-semibold px-2 py-1 rounded-full text-white ${
+              displayedStock > 0 ? "bg-green-600" : "bg-red-500"
+            }`}
+          >
+            {displayedStock > 0 ? `${t("stock")}: ${displayedStock}` : t("out_of_stock")}
+          </span>
+          {product.trending && (
+            <span className="text-xs font-semibold px-2 py-1 bg-red-500 text-white rounded-full">
+              {t("trending")}
+            </span>
+          )}
+        </div>
+  
+        {/* Add to Cart Hover Button */}
+        <button
+          onClick={handleAddToCart}
+          disabled={displayedStock === 0}
+          className={`absolute bottom-3 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full text-sm font-medium text-white transition-all duration-300
+          ${
+            displayedStock > 0
+              ? "bg-[#8B5C3E] opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0"
+              : "bg-gray-400 cursor-not-allowed"
+          }`}
+        >
+          <FiShoppingCart className="inline mr-1" />
+          {displayedStock > 0 ? t("add_to_cart") : t("out_of_stock")}
+        </button>
       </div>
-
-      <div className="mt-3 px-2 flex flex-col gap-2">
+  
+      <div className="p-4 text-center space-y-2">
         <Link to={`/products/${product._id}`}>
-          <h3 className="text-lg font-semibold hover:text-blue-600">{title}</h3>
+          <h3 className="text-lg font-bold text-gray-800 hover:text-[#8B5C3E] transition-colors duration-300">
+            {title}
+          </h3>
         </Link>
-
-        <p className="text-gray-600 text-sm">
+  
+        <p className="text-sm text-gray-500">
           {description.length > 60 ? `${description.slice(0, 60)}...` : description}
         </p>
-
+  
         {displayedColor && (
-          <p className="text-sm text-gray-500 italic">
+          <p className="text-sm italic text-gray-500">
             {t("color")}: <span className="text-gray-700 font-medium">{displayedColor}</span>
           </p>
         )}
-
+  
         {product.colors?.length > 0 && (
           <div className="text-sm text-gray-600">
             <p className="font-medium">{t("available_colors")}:</p>
@@ -167,16 +168,16 @@ const ProductCard = ({ product }) => {
             </ul>
           </div>
         )}
-
-        <p className="font-medium text-lg">
-          <span className="text-green-600 font-bold">${product?.newPrice}</span>
+  
+        <div className="text-lg font-semibold text-[#8B5C3E]">
+          {product?.newPrice} DT
           {product?.oldPrice && (
-            <span className="text-gray-500 line-through ml-2 text-sm">
-              ${Math.round(product?.oldPrice)}
+            <span className="text-gray-400 text-sm line-through ml-2">
+              {Math.round(product?.oldPrice)} DT
             </span>
           )}
-        </p>
-
+        </div>
+  
         <div className="flex items-center justify-center text-sm">
           <label className="mr-2">{t("quantity")}:</label>
           <input
@@ -189,22 +190,28 @@ const ProductCard = ({ product }) => {
             disabled={displayedStock === 0}
           />
         </div>
-
+        <div className="mt-3">
         <button
-          onClick={handleAddToCart}
-          disabled={displayedStock === 0}
-          className={`mt-3 px-6 py-2 rounded-md text-white text-sm font-medium ${
-            displayedStock > 0
-              ? "bg-[#8B5C3E] hover:bg-[#74452D]"
-              : "bg-gray-300 cursor-not-allowed"
-          }`}
-        >
-          <FiShoppingCart className="inline mr-2" />
-          {displayedStock > 0 ? t("add_to_cart") : t("out_of_stock")}
-        </button>
+  onClick={handleAddToCart}
+  disabled={displayedStock === 0}
+  className={`add-to-cart-btn ${
+    displayedStock > 0 ? "" : "bg-gray-300 cursor-not-allowed"
+  }`}
+>
+  <FiShoppingCart className="inline mr-1" />
+  {displayedStock > 0 ? t("add_to_cart") : t("out_of_stock")}
+</button>
+
+</div>
+
+
       </div>
     </div>
   );
+  
+ 
 };
 
 export default ProductCard;
+
+

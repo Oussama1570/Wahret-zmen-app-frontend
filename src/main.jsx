@@ -5,13 +5,13 @@ import './index.css';
 import { RouterProvider } from 'react-router-dom';
 import router from './routers/router.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../src/i18n.js'; // ✅ i18n before App
+import '../src/i18n.js'; // ✅ Load i18n before anything
 import { Provider } from 'react-redux';
 import { store } from './redux/store.js';
-import { HelmetProvider } from "react-helmet-async";
+import { HelmetProvider } from 'react-helmet-async';
 
 /* ================================
-   🛡️ Soft-Handle 'removeChild' Errors
+   🛡️ Soft-Handle removeChild Errors
 ================================ */
 const isRemoveChildError = (message) =>
   typeof message === 'string' && message.includes('removeChild');
@@ -47,7 +47,7 @@ console.warn = (...args) => {
    🚀 Render App
 ================================ */
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ 
     <Provider store={store}>
       <HelmetProvider>
         <Suspense fallback={<div className="text-center py-10">Loading Wahret Zmen...</div>}>
@@ -55,5 +55,5 @@ createRoot(document.getElementById('root')).render(
         </Suspense>
       </HelmetProvider>
     </Provider>
-  </StrictMode>
+  
 );

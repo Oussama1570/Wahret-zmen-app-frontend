@@ -7,6 +7,9 @@ import Selector from "../../components/Selector.jsx";
 import "../../Styles/StylesOurSellers.css";
 import FadeInSection from "../../Animations/FadeInSection.jsx";
 import { useTranslation } from "react-i18next";
+import ScrollFade from "../../Animations/ScrollFade.jsx"; // ✅ Correct
+
+
 
 const categories = ["All", "Men", "Women", "Children"];
 
@@ -47,9 +50,13 @@ const OurSellers = () => {
     <FadeInSection>
       <div className="py-10 bg-[#f8f1e5] rounded-2xl shadow-md mx-4">
         {/* Title */}
-        <h2 className="text-4xl text-[#5a382d] font-bold mb-6 text-center uppercase tracking-wide">
-          {t("wahret_zmen_collection")}
-        </h2>
+        <ScrollFade direction="right" delay={0}>
+  <h2 className="text-4xl text-[#5a382d] font-bold mb-6 text-center uppercase tracking-wide">
+    {t("wahret_zmen_collection")}
+  </h2>
+</ScrollFade>
+
+
 
         {/* Category Filter */}
 <div className="mb-8 flex flex-col items-center px-4 sm:px-0">

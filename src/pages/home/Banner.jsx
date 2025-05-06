@@ -1,38 +1,55 @@
 import React from 'react';
-import '../../Styles/StylesBanner.css';
-import bannerImg from "../../assets/banner.png";
 import { Link } from 'react-router-dom';
-import FadeInSection from '../../Animations/FadeInSection.jsx'; // Import fade-in component
-import { useTranslation, Trans } from "react-i18next";
-
+import { useTranslation } from "react-i18next";
+import ScrollFade from '../../Animations/ScrollFade.jsx'; // ✅ Make sure this is the directional one
+import AnimatedText from "../../Animations/AnimatedText.jsx";
+import '../../Styles/StylesBanner.css';
+import bannerImg from "../../assets/Banner/Banner.png";
+import "../../Styles/StylesAnimatedText.css";
 
 const Banner = () => {
   const { t } = useTranslation();
 
+  
   return (
-    <FadeInSection>
-      <div className="banner-container rounded-2xl shadow-md overflow-hidden mx-4">
-
-        {/* Banner Image */}
-        <div className="banner-image">
-          <img src={bannerImg} alt={t("banner_img_alt")} />
-        </div>
-
-        {/* Banner Text */}
-        <div className="banner-text">
-          <h1>{t("banner_title")}</h1>
-          <p>
-            {t("banner_description")}
-          </p>
-          <Link to="/products">
-            <button className="banner-btn">{t("discover_now")}</button>
-          </Link>
-        </div>
+    <div className="banner-container-enhanced">
+  
+      {/* 🖼 Image - Fade from Right */}
+      <div className="banner-image-wrapper">
+      <ScrollFade direction="right" delay={0.5}>
+  <Link to="/products">
+    <img
+      src={bannerImg}
+      alt={t("banner_img_alt")}
+      className="banner-img"
+    />
+  </Link>
+</ScrollFade>
 
       </div>
-    </FadeInSection>
+  
+      {/* ✨ Text Section */}
+      <div className="banner-text-wrapper">
+  
+        {/* Title - No animation */}
+        <h1 className="banner-title">{t("banner_title")}</h1>
+  
+        {/* Description - Animated Text */}
+        <div className="banner-description">
+          <AnimatedText text={t("banner_description")} />
+        </div>
+  
+        {/* CTA Button - No animation */}
+        <Link to="/products">
+          <button className="banner-cta-btn">
+            {t("discover_now", "Discover Now")}
+          </button>
+        </Link>
+  
+      </div>
+    </div>
   );
-};
-
+  
+  };
 
 export default Banner;
