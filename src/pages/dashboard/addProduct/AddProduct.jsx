@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form";
 import { useAddProductMutation } from "../../../redux/features/products/productsApi";
 import Swal from "sweetalert2";
 import axios from "axios";
+import imageCompression from "browser-image-compression";
 import getBaseUrl from "../../../utils/baseURL";
 import "../../../Styles/StylesAddProduct.css";
+
+
 
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -12,6 +15,16 @@ const AddProduct = () => {
   const [coverPreviewURL, setCoverPreviewURL] = useState("");
   const [colorInputs, setColorInputs] = useState([]);
   const [addProduct, { isLoading }] = useAddProductMutation();
+
+  // ✅ compresse l'image avant upload
+  const compressImage = async (file) => {
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 1024,
+      useWebWorker: true,
+    };
+    return await imageCompression(file, options);
+  };
 
   const handleCoverImageChange = (e) => {
     const file = e.target.files?.[0];
@@ -49,17 +62,23 @@ const AddProduct = () => {
 
   const uploadImage = async (file) => {
     if (!file || !(file instanceof File) || !file.type.startsWith("image/")) return "";
-    const formData = new FormData();
-    formData.append("image", file);
+
     try {
+      const compressedFile = await compressImage(file);
+
+      const formData = new FormData();
+      formData.append("image", compressedFile);
+
       const res = await axios.post(`${getBaseUrl()}/api/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
+
       return res.data.image;
     } catch (error) {
       console.error("❌ Image upload failed:", error);
+      Swal.fire("Erreur", "Échec de l’envoi de l’image. Vérifiez la taille ou la connexion.", "error");
       return "";
     }
   };
@@ -70,58 +89,61 @@ const AddProduct = () => {
       if (coverImageFile instanceof File && coverImageFile.type.startsWith("image/")) {
         coverImageUploadPromise = uploadImage(coverImageFile);
       }
-  
+
       const colorUploadPromises = colorInputs.map(async (colorInput) => {
         if (colorInput.imageFile instanceof File && colorInput.colorName && colorInput.stock >= 0) {
           const imageUrl = await uploadImage(colorInput.imageFile);
           return {
-            colorName: colorInput.colorName, // Only English
+            colorName: colorInput.colorName, // anglais uniquement
             image: imageUrl,
             stock: Number(colorInput.stock),
           };
         }
         return null;
       });
-  
+
       const [coverImage, colorsArray] = await Promise.all([
         coverImageUploadPromise,
         Promise.all(colorUploadPromises),
       ]);
-  
+
       const filteredColors = colorsArray.filter(Boolean);
-  
+
       const allowedCategories = ["Men", "Women", "Children"];
       const finalCategory = allowedCategories.includes(data.category) ? data.category : "Men";
-  
+
       const newProductData = {
-        title: data.title, // English only
-        description: data.description, // English only
+        title: data.title,
+        description: data.description,
         category: finalCategory,
         coverImage,
-        colors: filteredColors, // Only English color names
+        colors: filteredColors,
         oldPrice: Number(data.oldPrice),
         newPrice: Number(data.newPrice),
         stockQuantity: filteredColors[0]?.stock || 0,
         trending: data.trending || false,
       };
-  
+
       await addProduct(newProductData).unwrap();
-      Swal.fire("Succès!", "Produit ajouté avec succès!", "success");
-  
+      Swal.fire("Succès", "Produit ajouté avec succès !", "success");
+
       reset();
       setCoverImageFile(null);
       setCoverPreviewURL("");
       setColorInputs([]);
     } catch (error) {
       console.error("❌ Error adding product:", error?.data || error);
-      Swal.fire("Erreur!", "Échec de l'ajout du produit.", "error");
+      Swal.fire("Erreur", "Échec de l’ajout du produit.", "error");
     }
   };
-  
+
   useEffect(() => {
     document.documentElement.dir = "ltr";
   }, []);
+
   
+  
+
 
 
 
