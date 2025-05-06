@@ -61,4 +61,64 @@
     }
   }
   
+  .fade-in-right-to-left {
+    opacity: 0; /* Start hidden */
+    animation: fadeRightToLeft 0.8s ease forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeRightToLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Stop at normal position */
+    }
+  }
+
+  .hidden-before-scroll {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+
+  .hidden-before-scroll {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .fade-in-left-to-right {
+    opacity: 0;
+    animation: fadeLeftToRight 0.8s ease forwards;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeLeftToRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .fade-in-bottom {
+    opacity: 0;
+    animation: fadeBottom 0.8s ease forwards;
+  }
+  
+  @keyframes fadeBottom {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   

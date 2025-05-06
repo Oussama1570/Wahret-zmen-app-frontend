@@ -24,12 +24,16 @@ const ScrollFade = ({ children, direction = "right", delay = 0 }) => {
     };
   }, []);
 
-  const animationClass = isVisible ? `fade-in-${direction}` : "hidden-before-scroll";
+  const directionClass = isVisible
+  ? direction === "right-to-left"
+    ? "fade-in-right-to-left"
+    : `fade-in-${direction}`
+  : "hidden-before-scroll";
 
   return (
     <div
       ref={ref}
-      className={animationClass}
+      className={directionClass}
       style={{ animationDelay: `${delay}s` }}
     >
       {children}

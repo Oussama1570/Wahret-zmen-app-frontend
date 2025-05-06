@@ -16,7 +16,8 @@ const Banner = () => {
   
       {/* 🖼 Image - Fade from Right */}
       <div className="banner-image-wrapper">
-      <ScrollFade direction="right" delay={0.5}>
+      <ScrollFade direction="right-to-left" delay={0.5}>
+
   <Link to="/products">
     <img
       src={bannerImg}
@@ -26,13 +27,17 @@ const Banner = () => {
   </Link>
 </ScrollFade>
 
+
       </div>
   
       {/* ✨ Text Section */}
       <div className="banner-text-wrapper">
   
         {/* Title - No animation */}
-        <h1 className="banner-title">{t("banner_title")}</h1>
+        <ScrollFade direction="left-to-right" delay={0.5}>
+  <h1 className="banner-title">{t("banner_title")}</h1>
+</ScrollFade>
+
   
         {/* Description - Animated Text */}
         <div className="banner-description">
@@ -40,11 +45,14 @@ const Banner = () => {
         </div>
   
         {/* CTA Button - No animation */}
-        <Link to="/products">
-          <button className="banner-cta-btn">
-            {t("discover_now", "Discover Now")}
-          </button>
-        </Link>
+        <ScrollFade direction="bottom" delay={0.6}>
+  <Link to="/products">
+    <button className="banner-cta-btn">
+      {t("discover_now")}
+    </button>
+  </Link>
+</ScrollFade>
+
   
       </div>
     </div>
