@@ -31,3 +31,17 @@
 label input[type="checkbox"]:checked + span {
   font-weight: bold;
 }
+
+/* Make sure main content doesn't push footer too far when loading */
+.main-content {
+  min-height: 80vh;
+}
+
+/* Loader wrapper if needed */
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  background-color: #fff;
+}

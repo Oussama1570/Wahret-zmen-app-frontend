@@ -12,7 +12,7 @@ import { productEventsActions } from "../redux/features/products/productEventsSl
 
 // 🌀 Beautiful Wahret Zmen Loader
 const WahretZmenLoader = () => (
-  <div className="flex justify-center items-center h-screen w-full bg-white">
+  <div className="flex justify-center items-center py-20 w-full bg-white">
     <div className="relative w-16 h-16">
       <div className="absolute inset-0 rounded-full border-4 border-t-transparent border-[#D4AF37] animate-spin"></div>
       <div className="absolute inset-2 rounded-full border-2 border-[#A67C52] opacity-40"></div>
