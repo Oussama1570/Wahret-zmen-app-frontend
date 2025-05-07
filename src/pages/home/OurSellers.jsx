@@ -59,11 +59,13 @@ const OurSellers = () => {
 
 
         {/* Category Filter */}
-<div className="mb-8 flex flex-col items-center px-4 sm:px-0">
+        <div className="mb-6 flex flex-col items-center px-2 sm:px-0 w-full">
+
   <h3 className="select-category-title text-lg sm:text-xl font-semibold text-[#5a382d] mb-2 text-center">
     {t("select_category")}
   </h3>
-  <div className="w-full max-w-xs">
+  <div className="w-full px-2 sm:px-0 max-w-xs">
+
     <Selector options={categories} onSelect={setSelectedCategory} />
   </div>
 </div>
