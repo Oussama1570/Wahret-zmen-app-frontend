@@ -2,7 +2,6 @@ import React from "react";
 import "../Styles/StylesAbout.css";
 import FadeInSection from "../Animations/FadeInSection.jsx";
 import AboutImage1 from "../../src/assets/About/About Img 1.webp";
-import AboutImage2 from "../../src/assets/About/About Img 2.webp";
 import AboutImage3 from "../../src/assets/About/About Img 3.webp";
 import AboutImage4 from "../../src/assets/About/About Img 4.webp";
 import AboutImage5 from "../../src/assets/About/About Img 5.webp";
