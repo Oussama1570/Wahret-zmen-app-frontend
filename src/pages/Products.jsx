@@ -190,15 +190,16 @@ const Products = () => {
           {filteredProducts.length < products.length && !searchLoading && (
             <FadeInSection delay={0.6} duration={0.6}>
               <div className="text-center mt-8">
-                {isLoadingMore ? (
-                  <div className="flex justify-center items-center h-24">
-                    <WahretZmenLoader />
-                  </div>
-                ) : (
-                  <button className="wahret-zmen-btn w-[250px]" onClick={handleLoadMore}>
-                    {t("load_more")}
-                  </button>
-                )}
+              {isLoadingMore ? (
+  <div className="flex justify-center items-center h-24">
+    <InlineWahretZmenLoader />
+  </div>
+) : (
+  <button className="wahret-zmen-btn w-[250px]" onClick={handleLoadMore}>
+    {t("load_more")}
+  </button>
+)}
+
               </div>
             </FadeInSection>
           )}

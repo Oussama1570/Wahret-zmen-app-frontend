@@ -26,3 +26,8 @@
     font-size: 0.95rem;
   }
 }
+
+/* Optional: Add smooth selection transition */
+label input[type="checkbox"]:checked + span {
+  font-weight: bold;
+}

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const SelectorsPageProducts = ({ options = [], onSelect, label }) => {
   const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === "ar" || i18n.language === "ar-SA"; // 🆕 detect RTL
+  const isRTL = i18n.language === "ar" || i18n.language === "ar-SA";
   const [selected, setSelected] = useState(["All"]);
 
   useEffect(() => {
@@ -33,25 +33,34 @@ const SelectorsPageProducts = ({ options = [], onSelect, label }) => {
 
   return (
     <FadeInSection delay={0.1}>
-      <div className="flex flex-col items-center mb-6" dir={isRTL ? "rtl" : "ltr"}> {/* ✅ dynamic dir */}
-        <label className="text-lg font-medium text-[#5a382d] mb-3">
+      <div
+        className="flex flex-col items-center mb-6 px-4 sm:px-0"
+        dir={isRTL ? "rtl" : "ltr"}
+      >
+        <label className="text-xl sm:text-2xl font-serif text-[#5a382d] mb-4 tracking-wide">
           {t(label)}
         </label>
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-wrap gap-3 justify-center">
           {options.map((option, index) => (
             <label
               key={index}
-              className="flex items-center space-x-2 rtl:space-x-reverse gap-x-2 cursor-pointer"
+              className={`flex items-center gap-2 sm:gap-3 px-4 py-2 rounded-full border 
+              cursor-pointer transition-all duration-300
+              ${
+                selected.includes(option)
+                  ? "bg-[#D4AF37] text-white border-[#D4AF37] shadow-md"
+                  : "bg-white border-gray-300 text-gray-700 hover:border-[#D4AF37] hover:text-[#D4AF37]"
+              }`}
             >
               <input
                 type="checkbox"
                 value={option}
                 checked={selected.includes(option)}
                 onChange={() => handleChange(option)}
-                className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="hidden"
               />
-              <span className="text-gray-700 text-base">
+              <span className="text-sm sm:text-base font-medium capitalize whitespace-nowrap">
                 {t(`product_filters.${option.toLowerCase()}`)}
               </span>
             </label>
