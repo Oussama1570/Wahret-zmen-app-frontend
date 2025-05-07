@@ -85,10 +85,14 @@ const OurSellers = () => {
               rtl={isRTL} // ✅ RTL support for Arabic
             >
               {filteredProducts.map((product, index) => (
-                <div key={index} className="p-4">
-                  <ProductCard product={product} />
-                </div>
-              ))}
+  <FadeInSection key={index} delay={index * 0.1} duration={0.6} yOffset={30}>
+    <div className="p-4">
+      <ProductCard product={product} />
+    </div>
+  </FadeInSection>
+))}
+
+
             </Carousel>
           ) : (
             <p className="text-center text-[#5a382d] text-lg">

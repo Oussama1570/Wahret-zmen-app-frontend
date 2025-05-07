@@ -117,9 +117,15 @@ const ManageProducts = () => {
               products
               .filter((product) => {
                 const lowerSearch = searchTerm.toLowerCase();
-                const matchesTitle =
-                  product.title?.toLowerCase().includes(lowerSearch) ||
-                  product.translations?.[lang]?.title?.toLowerCase().includes(lowerSearch);
+                const matchesTitle = [
+                  product.title,
+                  product.translations?.fr?.title,
+                  product.translations?.ar?.title
+                ]
+                  .filter(Boolean) // remove null/undefined
+                  .map((t) => t.toLowerCase())
+                  .some((title) => title.includes(lowerSearch));
+                
               
                 const matchesId = product._id?.toLowerCase().includes(searchId.toLowerCase());
               

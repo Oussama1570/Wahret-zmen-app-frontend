@@ -11,6 +11,7 @@
     overflow: hidden;
     position: relative;
     animation: fadeIn 1.2s ease-in-out;
+    
   }
   
   .banner-container::before {
@@ -47,7 +48,7 @@
   }
   
   .banner-image-img {
-    width: 100%;
+    width: 100% !important;
     border-radius: 10px;
     
     object-fit: cover;

@@ -17,6 +17,7 @@ i18n
           "about-menu": "About",
           "contact-menu": "Contact",
           "admin_dashboard":"admin dashboard",
+
           search_input: {
             placeholder: "Search for products..."
           },
@@ -39,7 +40,8 @@ i18n
           },
 
 
-         
+         Welcome_Banner_title: "Welcome to Wahret Zmen",
+         banner_img_alt: "Wahret Zmen traditional banner",
 
 
           news: {
@@ -252,7 +254,8 @@ i18n
     "contact-menu": "Contactez-nous",  // ✅ as you asked
     "admin_dashboard":"Tableau de bord",
           search_input: {
-            placeholder: "Rechercher des produits..."
+            placeholder: "Rechercher des produits...",
+            
           },
           dashboard: "Tableau de bord",
           orders: "Commandes",
@@ -358,7 +361,9 @@ i18n
           },
 
          
-
+          Welcome_Banner_title: "Bienvenue à Wahret Zmen",
+          banner_img_alt: "Bannière de vêtements traditionnels Wahret Zmen",
+          
 
 
           register: {
@@ -523,20 +528,21 @@ i18n
             error_message: "Échec de la commande"
           },
           about: {
-            title: "À propos de Wahret Zmen",
-            description: "Wahret Zmen est une boutique de vêtements traditionnels tunisiens qui célèbre le patrimoine à travers une mode intemporelle.",
-            mission_title: "Notre Mission",
-            mission_text1: "Wahret Zmen est plus qu'une boutique — c'est un hommage à l'identité tunisienne, à l'artisanat et à l'élégance. Nous sommes spécialisés dans les vêtements authentiques tels que les <strong>Jebbas</strong>, <strong>Caftans</strong>, et les robes finement brodées, fabriquées à la main par des artisans locaux.",
-            mission_text2: "Chaque article de notre collection reflète des générations d'art traditionnel, soigneusement sélectionné pour les clients recherchant à la fois le style et l'authenticité culturelle. Notre vision est de préserver nos racines tout en habillant le monde de la beauté tunisienne.",
-            crafted_title: "Confectionné avec Amour",
-            crafted_text1: "Nos artisans utilisent des techniques traditionnelles transmises de génération en génération pour garantir que chaque article soit unique, durable et riche en détails. Des tenues de mariage aux vêtements culturels modernes, Wahret Zmen mêle héritage et élégance.",
-            crafted_text2: "Chaque pièce est une œuvre de passion, cousue avec fierté, et conçue pour mettre en valeur la beauté de la culture tunisienne.",
-            behind_title: "Derrière la Boutique",
-            behind_text: "Entrez dans notre univers de broderies délicates et de savoir-faire ancestral. Le cœur de Wahret Zmen réside entre les mains de nos artisans talentueux.",
-            join_title: "Rejoignez la Tradition",
-            join_text1: "Que vous visitiez notre boutique en personne ou parcouriez notre magasin en ligne, nous vous invitons à découvrir l'esprit de la Tunisie tissé dans chaque vêtement.",
-            join_text2: "Wahret Zmen est une célébration de l'héritage, de l'élégance, et de l'identité — conçue pour vous."
+            title: "À propos de nous",
+            description: "Jebba tunisienne authentique, brodée à la main avec une touche traditionnelle et une vision moderne en soie naturelle.",
+            mission_title: "Notre mission",
+            mission_text1: "Une jebba du cœur de la médina de Tunis, confectionnée par des mains tunisiennes – du producteur au consommateur.",
+            mission_text2: "Tout ce qui est authentique est une fierté pour l’artisanat tunisien. Nous faisons tout notre possible pour préserver ce métier noble : la fabrication du vêtement traditionnel.",
+            crafted_title: "Nos produits",
+            crafted_text1: "Jebba, farmla, serwal arbi, barnous, balgha, kantra, mentane, chapelet d’ambre…",
+            crafted_text2: "Tous ces produits sont réalisés par des artisans spécialisés dans l’art ancien revisité avec une touche contemporaine.",
+            behind_title: "Au cœur de la Médina",
+            behind_text: "Nous sommes situés au cœur de la Médina de Tunis, près de la Mosquée Zitouna, Hammam El Kachachine, Café El Khattab, Café El Anba, et l’Association Coranique.",
+            join_title: "Rejoignez l'héritage",
+            join_text1: "Chaque pièce reflète l’histoire et l’identité tunisienne.",
+            join_text2: "Découvrez l’élégance authentique avec une touche moderne de Wahret Zmen."
           },
+          
 
           "contact": {
   "page_title": "Contactez-nous",
@@ -576,6 +582,9 @@ i18n
           "admin_dashboard":"لوحة التّحكّم المدير",
           orders: "الطلبات",
           logout: "تسجيل الخروج",
+          Welcome_Banner_title: "مرحبًا بك في وهرة الزمن",
+          banner_img_alt: "لافتة وهرة الزمن التقليدية",
+
           select_category: "اختر الفئة",
           categories: {
           all: "الكل",
@@ -839,19 +848,20 @@ i18n
           
           about: {
             title: "حول وهرة الزمن",
-            description: "وهرة الزمن هي بوتيك ملابس تقليدية تونسية تحتفي بالإرث الثقافي من خلال أزياء خالدة.",
+            description: "جُبّة تونسيّة أصليّة، بتطريز يدويّ يحمل طابعًا تقليديًّا برؤية عصريّة، مصنوعة من الحرير الطبيعي.",
             mission_title: "مهمتنا",
-            mission_text1: "وهرة الزمن أكثر من مجرد بوتيك — إنها تكريم للهوية التونسية، والحرف اليدوية، والأناقة. نحن متخصصون في الملابس الأصيلة مثل الجباب، القفاطين، والفساتين المطرزة يدويًا من قبل حرفيين محليين.",
-            mission_text2: "كل قطعة في مجموعتنا تعكس أجيالاً من الفن التقليدي، مختارة بعناية لمن يبحثون عن الأناقة والأصالة الثقافية. رؤيتنا هي الحفاظ على الجذور بينما نلبس العالم بجمال تونسي.",
-            crafted_title: "مصنوعة بحب",
-            crafted_text1: "يستخدم حرفيونا تقنيات تقليدية توارثتها الأجيال لضمان أن كل قطعة فريدة، ومتينة، وغنية بالتفاصيل. من ملابس الأعراس إلى الأزياء الثقافية العصرية، تجمع وهرة الزمن بين التراث والأناقة.",
-            crafted_text2: "كل قطعة عمل من الشغف، خيطت بالفخر، وصممت لتُبرز جمال الثقافة التونسية.",
-            behind_title: "وراء البوتيك",
-            behind_text: "ادخل إلى عالمنا من التطريز الدقيق والمهارات المتوارثة. قلب وهرة الزمن يكمن في أيدي حرفيينا المهرة.",
-            join_title: "انضم إلى التقاليد",
-            join_text1: "سواء كنت تزور متجرنا أو تتسوق عبر الإنترنت، نرحب بك لاكتشاف روح تونس المنسوجة في كل قطعة.",
-            join_text2: "وهرة الزمن هو احتفال بالإرث، والأناقة، والهوية — صُمم لأجلك."
+            mission_text1: "جُبّة من قلب المدينة العتيقة بتونس، بأنامل تونسيّة، من المنتج إلى المستهلك.",
+            mission_text2: "كلّ ما هو أصليّ هو فخر للصّناعات التقليديّة التّونسيّة، ونحن نسعى بكلّ جهد للحفاظ على فخر هذه المهنة: صناعة اللّباس التّقليديّ.",
+            crafted_title: "منتوجاتنا",
+            crafted_text1: "جُبّة، فرملة بدعيّة، صدريّة، سروال عربي، برنوس، بلغة، كنترة، منتان، مسبحة عنبر...",
+            crafted_text2: "كلّ هذه المنتوجات تُصنع بأيادٍ مختصّة في كلّ ما هو أصيل وعتيق بروح عصريّة.",
+            behind_title: "من قلب المدينة العتيقة",
+            behind_text: "نحن نوجد في قلب المدينة العتيقة بتونس، بجوار جامع الزيتونة، حمّام الكشّاشين، مقهى الخطاب، مقهى العنبة، والرابطة القرآنيّة... كلّ هذه الأماكن تحيط بنا وتعكس هويّتنا.",
+            join_title: "انضموا إلى إرثنا",
+            join_text1: "كل قطعة تُعبّر عن تاريخ تونس وهويّتها.",
+            join_text2: "ندعوكم لتجربة الأناقة الأصيلة بلمسة عصريّة من Wahret Zmen."
           },
+          
           
 
           contact: {
