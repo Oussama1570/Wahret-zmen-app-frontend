@@ -9,12 +9,10 @@ import news1 from "../../assets/news/news n°1 Wahret Zmen.webp";
 import news2 from "../../assets/news/news n°2 Wahret Zmen.webp";
 import news3 from "../../assets/news/news n°3 Wahret Zmen.webp";
 import FadeInSection from '../../Animations/FadeInSection.jsx';
-import "../../Styles/StylesNews.css";
+import "../../Styles/StylesNews.css"; // ✅ Import your CSS file
 
 const News = () => {
-  const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === "ar" || i18n.language === "ar-SA";
-
+  const { t } = useTranslation();
   const newsItems = t("news.items", { returnObjects: true }) || [];
   const images = [news1, news2, news3];
 
@@ -27,7 +25,6 @@ const News = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
-    rtl: isRTL,
     responsive: [
       {
         breakpoint: 1024,
@@ -44,34 +41,23 @@ const News = () => {
     ]
   };
 
-
   return (
     <FadeInSection>
       <div className="news-wrapper">
-       
-        
-
-        {/* Actualités */}
-        <h3 className="news-subheading">{t("news.section_title")}</h3>
+        <h2 className="news-title">{t("news.section_title")}</h2>
 
         <div className="news-slider-container">
           <Slider {...settings}>
             {newsItems.map((item, index) => (
               <div key={index} className="news-card">
-                <div
-                  className="news-content"
-                  style={{ flexDirection: isRTL ? "row-reverse" : "row" }}
-                >
-                  {/* Image */}
+                <div className="news-content">
                   <div className="news-image-wrapper">
                     <img
-                      src={images[index] || images[0]}
+                      src={images[index] || news1}
                       alt={item.title}
                       className="news-image"
                     />
                   </div>
-
-                  {/* Text */}
                   <div className="news-text">
                     <Link to="/" className="news-link">
                       <h3 className="news-heading">{item.title}</h3>
@@ -89,6 +75,4 @@ const News = () => {
   );
 };
 
-
 export default News;
-
