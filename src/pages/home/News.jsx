@@ -12,7 +12,8 @@ import FadeInSection from '../../Animations/FadeInSection.jsx';
 import "../../Styles/StylesNews.css"; // ✅ Import your CSS file
 
 const News = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
   const newsItems = t("news.items", { returnObjects: true }) || [];
   const images = [news1, news2, news3];
 
@@ -25,6 +26,7 @@ const News = () => {
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
+    rtl: i18n.language === "ar",
     responsive: [
       {
         breakpoint: 1024,
