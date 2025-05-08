@@ -4,7 +4,7 @@ import FadeInSection from "../Animations/FadeInSection.jsx";
 import aboutImage1 from "../assets/About/about-img-1.webp";
 import aboutImage2 from "../assets/About/about-img-2.webp";
 import aboutImage3 from "../assets/About/about-img-3.webp";
-import aboutImage4 from "../assets/About/about-img-4.webp";
+import aboutImage4 from "../assets/About/about-img-4.png";
 import aboutImage5 from "../assets/About/about-img-5.webp";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
