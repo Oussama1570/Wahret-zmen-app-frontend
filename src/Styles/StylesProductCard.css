@@ -235,4 +235,54 @@
   }
   
 
-  
+  /* 🌐 Responsive ProductCard.css Additions */
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .product-card .p-4 {
+    padding: 1rem;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+
+  .product-card .text-sm {
+    font-size: 0.85rem;
+  }
+
+  .add-to-cart-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .product-card .w-full.h-52 {
+    height: 180px;
+  }
+
+  .product-card img {
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    border-radius: 0.75rem;
+  }
+
+  .product-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .product-description {
+    font-size: 0.8rem;
+  }
+
+  .color-list li {
+    padding: 0.2rem 0.4rem;
+  }
+}

@@ -43,3 +43,15 @@ label input[type="checkbox"]:checked + span {
   align-items: center;
   height: 100px;
 }
+
+/* 🌐 Responsive Products Grid */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 1.25rem !important;
+  }
+
+  .main-content {
+    padding-bottom: 3rem;
+  }
+}
