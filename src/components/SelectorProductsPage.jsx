@@ -3,6 +3,9 @@ import { useTranslation } from "react-i18next";
 import "../Styles/StylesSelectorProductsPage.css";
  // classic styles
 
+ // add a comment
+// updated to force Vercel build
+
 const SelectorsPageProducts = ({ options = [], onSelect, label }) => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar" || i18n.language === "ar-SA";
