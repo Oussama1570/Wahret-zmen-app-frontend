@@ -12,8 +12,7 @@ const AdminLogin = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const isRTL = false; // Always use LTR, even for Arabic
-
+  const isRTL = i18n.language === "ar";
 
   const showSuccessAlert = (title, text) => {
     Swal.fire({
@@ -64,9 +63,11 @@ const AdminLogin = () => {
     }
   };
 
+
   return (
     <div
-       
+      dir={isRTL ? "rtl" : "ltr"}
+      lang={i18n.language}
       className="flex justify-center items-center min-h-screen bg-[#F4EEE0]"
     >
       <div className="w-full max-w-md bg-white p-8 shadow-lg rounded-lg">
@@ -78,7 +79,7 @@ const AdminLogin = () => {
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div className={isRTL ? "text-right" : "text-left"}>
-            <label 
+            <label
               className="block text-gray-700 font-medium mb-1"
               htmlFor="username"
             >
@@ -90,14 +91,22 @@ const AdminLogin = () => {
               name="username"
               id="username"
               placeholder={t("admin.username_placeholder")}
-              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#8B5C3E] focus:outline-none 
-                ${isRTL ? "rtl:pr-3 rtl:pl-0" : ""}`}
+              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#8B5C3E] focus:outline-none ${
+                isRTL ? "text-right" : "text-left"
+              }`}
             />
-            {errors.username && <p className="text-red-500 text-sm">{t("admin.username_required")}</p>}
+            {errors.username && (
+              <p className="text-red-500 text-sm">
+                {t("admin.username_required")}
+              </p>
+            )}
           </div>
 
           <div className={isRTL ? "text-right" : "text-left"}>
-            <label className="block text-gray-700 font-medium mb-1" htmlFor="password">
+            <label
+              className="block text-gray-700 font-medium mb-1"
+              htmlFor="password"
+            >
               {t("admin.password_label")}
             </label>
             <input
@@ -106,10 +115,15 @@ const AdminLogin = () => {
               name="password"
               id="password"
               placeholder={t("admin.password_placeholder")}
-              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#8B5C3E] focus:outline-none 
-                ${isRTL ? "rtl:pr-3 rtl:pl-0" : ""}`}
+              className={`w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#8B5C3E] focus:outline-none ${
+                isRTL ? "text-right" : "text-left"
+              }`}
             />
-            {errors.password && <p className="text-red-500 text-sm">{t("admin.password_required")}</p>}
+            {errors.password && (
+              <p className="text-red-500 text-sm">
+                {t("admin.password_required")}
+              </p>
+            )}
           </div>
 
           <button
