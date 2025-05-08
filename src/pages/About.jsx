@@ -39,7 +39,8 @@ const About = () => {
             <img
               src={aboutImage1}
               alt="Wahret Zmen Boutique Interior"
-              loading="normal"
+              loading="lazy"
+              fetchpriority="low"
               className="rounded-2xl border-4 border-[#c69c6d] shadow-2xl mx-auto w-full max-w-md h-[300px] object-cover transition duration-700 ease-in-out hover:scale-110 hover:brightness-110 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
             />
           </div>
@@ -65,8 +66,9 @@ const About = () => {
           <div className="text-center">
             <img
               src={aboutImage2}
-              alt="Client in Traditional Garment – Wahret Zmen"
-              loading="normal"
+              alt="Wahret Zmen Boutique Interior"
+              loading="lazy"
+              fetchpriority="low"
               className="rounded-2xl border-4 border-[#c69c6d] shadow-2xl mx-auto w-full max-w-md h-[300px] object-cover transition duration-700 ease-in-out hover:scale-110 hover:brightness-110 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
             />
           </div>
@@ -93,8 +95,9 @@ const About = () => {
           <div className="text-center">
             <img
               src={aboutImage3}
-              alt="Artisan Embroidery Close-up – Wahret Zmen"
-              loading="normal"
+              alt="Wahret Zmen Boutique Interior"
+              loading="lazy"
+              fetchpriority="low"
               className="rounded-2xl border-4 border-[#c69c6d] shadow-2xl mx-auto w-full max-w-md h-[300px] object-cover transition duration-700 ease-in-out hover:scale-110 hover:brightness-110 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
             />
           </div>
@@ -119,8 +122,9 @@ const About = () => {
           <div className="text-center">
             <img
               src={aboutImage4}
-              alt="Artisan Embroidery Close-up – Wahret Zmen"
-              loading="normal"
+              alt="Wahret Zmen Boutique Interior"
+              loading="lazy"
+              fetchpriority="low"
               className="rounded-2xl border-4 border-[#c69c6d] shadow-2xl mx-auto w-full max-w-md h-[300px] object-cover transition duration-700 ease-in-out hover:scale-110 hover:brightness-110 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
             />
           </div>
@@ -150,8 +154,9 @@ const About = () => {
           <div className="text-center">
             <img
               src={aboutImage5}
-              alt="Artisan Embroidery Close-up – Wahret Zmen"
-              loading="normal"
+              alt="Wahret Zmen Boutique Interior"
+              loading="lazy"
+              fetchpriority="low"
               className="rounded-2xl border-4 border-[#c69c6d] shadow-2xl mx-auto w-full max-w-md h-[300px] object-cover transition duration-700 ease-in-out hover:scale-110 hover:brightness-110 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
             />
           </div>
