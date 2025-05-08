@@ -55,3 +55,17 @@ label input[type="checkbox"]:checked + span {
     padding-bottom: 3rem;
   }
 }
+
+/* Ensure mobile cards are centered */
+@media (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; /* ✅ Center cards */
+    padding: 0 1rem;       /* ✅ Add horizontal padding */
+  }
+}
+
+.product-card {
+  margin: 0 auto; /* ✅ Center it */
+}
