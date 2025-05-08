@@ -186,3 +186,28 @@
 .news-card {
   direction: rtl;
 }
+
+/* === RTL Fixes === */
+html[dir="rtl"] .news-content {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html[dir="rtl"] .news-heading {
+  text-align: right;
+}
+
+html[dir="rtl"] .news-description {
+  text-align: right;
+}
+
+/* Prevent shrinking the text in RTL */
+html[dir="rtl"] .news-card {
+  direction: rtl;
+}
+
+/* Optional: ensure image margin works in RTL */
+html[dir="rtl"] .news-image-wrapper {
+  margin-left: 1rem;
+  margin-right: 0;
+}
