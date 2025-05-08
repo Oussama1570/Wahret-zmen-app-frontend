@@ -4,7 +4,7 @@ import FadeInSection from "../Animations/FadeInSection.jsx";
 import aboutImage1 from "../assets/About/about-img-1.webp";
 import aboutImage2 from "../assets/About/about-img-2.webp";
 import aboutImage3 from "../assets/About/about-img-3.webp";
-
+import aboutImage4 from "../assets/About/about-img-4.webp";
 import aboutImage5 from "../assets/About/about-img-5.webp";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
@@ -118,7 +118,7 @@ const About = () => {
         <FadeInSection>
           <div className="text-center">
             <img
-              src={aboutImage3}
+              src={aboutImage4}
               alt="Artisan Embroidery Close-up – Wahret Zmen"
               loading="normal"
               className="rounded-2xl border-4 border-[#c69c6d] shadow-2xl mx-auto w-full max-w-md h-[300px] object-cover transition duration-700 ease-in-out hover:scale-110 hover:brightness-110 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
