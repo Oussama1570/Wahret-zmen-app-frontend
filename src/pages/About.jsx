@@ -5,7 +5,7 @@ import AboutImage1 from "../../src/assets/About/About Img 1.webp";
 import AboutImage3 from "../../src/assets/About/About Img 3.webp";
 import AboutImage4 from "../../src/assets/About/About Img 4.webp";
 import AboutImage5 from "../../src/assets/About/About Img 5.webp";
-
+import AboutImage6 from "../../src/assets/About/About Img 6.webp";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
@@ -149,7 +149,7 @@ const About = () => {
         <FadeInSection>
           <div className="text-center">
             <img
-              src={AboutImage5}
+              src={AboutImage6}
               alt="Artisan Embroidery Close-up – Wahret Zmen"
               loading="normal"
               className="rounded-2xl border-4 border-[#c69c6d] shadow-2xl mx-auto w-full max-w-md h-[300px] object-cover transition duration-700 ease-in-out hover:scale-110 hover:brightness-110 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"

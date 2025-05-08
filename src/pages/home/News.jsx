@@ -2,18 +2,18 @@ import React from 'react';
 import Slider from 'react-slick';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import news1 from "../../assets/news/news n°1 Wahret Zmen.webp";
 import news2 from "../../assets/news/news n°2 Wahret Zmen.webp";
 import news3 from "../../assets/news/news n°3 Wahret Zmen.webp";
 import FadeInSection from '../../Animations/FadeInSection.jsx';
-import "../../Styles/StylesNews.css"; // ✅ Import your CSS file
+import "../../Styles/StylesNews.css";
 
 const News = () => {
   const { t, i18n } = useTranslation();
-
+  const lang = i18n.language;
   const newsItems = t("news.items", { returnObjects: true }) || [];
   const images = [news1, news2, news3];
 
@@ -21,23 +21,23 @@ const News = () => {
     dots: true,
     infinite: true,
     speed: 600,
-    slidesToShow: 2,
+    slidesToShow: lang === "ar" ? 1 : 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
     arrows: false,
-    rtl: i18n.language === "ar",
+    rtl: lang === "ar",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
         }
       }
     ]
