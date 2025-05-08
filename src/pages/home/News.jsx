@@ -11,6 +11,8 @@ import news3 from "../../assets/news/news n°3 Wahret Zmen.webp";
 import FadeInSection from '../../Animations/FadeInSection.jsx';
 import "../../Styles/StylesNews.css";
 
+// Add New comment
+
 const News = () => {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
