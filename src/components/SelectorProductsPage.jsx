@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import "../Styles/StylesSelectorProductsPage.css"; // classic styles
+import "../Styles/StylesSelectorProductsPage.css";
+ // classic styles
 
 const SelectorsPageProducts = ({ options = [], onSelect, label }) => {
   const { t, i18n } = useTranslation();

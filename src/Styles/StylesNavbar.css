@@ -555,3 +555,44 @@ html[dir="rtl"] .mobile-menu-btn {
     margin-inline-end: 0.3rem;
   }
 }
+
+@media screen and (max-width: 768px) and (max-height: 450px) {
+  .navbar-container {
+    padding: 0.1rem 0 !important;
+    min-height: 40px !important;
+  }
+
+  .navbar-content {
+    min-height: 40px !important;
+    padding: 0 0.8rem !important;
+  }
+
+  .logo-img {
+    width: 20px !important;
+    height: 20px !important;
+    margin-inline-end: 5px !important;
+  }
+
+  .logo-text {
+    font-size: 0.85rem !important;
+  }
+
+  .mobile-menu-btn {
+    font-size: 1.1rem !important;
+  }
+
+  .nav-icons {
+    gap: 0.3rem !important;
+    padding: 0 0.2rem !important;
+  }
+
+  .user-icon,
+  .cart-icon,
+  .login-icon {
+    font-size: 1.3rem !important;
+  }
+
+  .language-switcher-wrapper {
+    margin-inline-end: 0.2rem !important;
+  }
+}
