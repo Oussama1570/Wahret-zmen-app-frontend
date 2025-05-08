@@ -37,11 +37,9 @@ label input[type="checkbox"]:checked + span {
   min-height: 80vh;
 }
 
-/* Loader wrapper if needed */
 .loader-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 80px 0;
-  background-color: #fff;
+  height: 100px;
 }
