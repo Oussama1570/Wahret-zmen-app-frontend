@@ -15,7 +15,8 @@ import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+    if (!i18n.isInitialized) return null;
   const isRTL = i18n.dir() === "rtl";
   const iconSpacing = isRTL ? "ml-2" : "mr-2";
   const iconTextClass = `flex items-center gap-2 ${isRTL ? "flex-row-reverse text-right" : "text-left"}`;

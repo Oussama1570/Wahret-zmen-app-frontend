@@ -8,7 +8,8 @@ import { useTranslation } from 'react-i18next';
 
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+    if (!i18n.isInitialized) return null;
   const [successMessage, setSuccessMessage] = useState(null);
 
   return (

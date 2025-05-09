@@ -10,7 +10,8 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  if (!i18n.isInitialized) return null;
 
   return (
     <div className="main-content">

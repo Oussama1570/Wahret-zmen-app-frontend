@@ -12,7 +12,8 @@ const Login = () => {
   const { loginUser, signInWithGoogle } = useAuth();
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+    if (!i18n.isInitialized) return null;
 
   const showSuccessAlert = (title, text) => {
     Swal.fire({

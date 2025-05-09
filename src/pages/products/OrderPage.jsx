@@ -16,6 +16,7 @@ import { productEventsActions } from "../../redux/features/products/productEvent
 const OrderPage = () => {
   const { currentUser } = useAuth();
   const { t, i18n } = useTranslation();
+  if (!i18n.isInitialized) return null;
   const lang = i18n.language;
   const dispatch = useDispatch();
 

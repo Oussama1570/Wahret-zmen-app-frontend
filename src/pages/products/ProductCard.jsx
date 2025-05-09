@@ -13,6 +13,7 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
+  if (!i18n.isInitialized) return null;
   const [quantity, setQuantity] = useState(1);
 
   // ✅ Zoom state

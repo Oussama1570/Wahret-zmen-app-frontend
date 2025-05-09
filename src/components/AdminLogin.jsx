@@ -12,6 +12,7 @@ const AdminLogin = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  if (!i18n.isInitialized) return null;
   const isRTL = i18n.language === "ar";
 
   const showSuccessAlert = (title, text) => {

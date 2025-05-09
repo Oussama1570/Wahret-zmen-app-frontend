@@ -11,6 +11,7 @@ import LargeBanner from "../../components/LargeBanner.jsx";
 const Home = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar" || i18n.language === "ar-SA";
+  if (!i18n.isInitialized) return null;
 
  
   return (

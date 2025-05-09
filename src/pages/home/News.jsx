@@ -12,7 +12,8 @@ import FadeInSection from '../../Animations/FadeInSection.jsx';
 import "../../Styles/StylesNews.css"; // ✅ Import your CSS file
 
 const News = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  if (!i18n.isInitialized) return null;
   const newsItems = t("news.items", { returnObjects: true }) || [];
   const images = [news1, news2, news3];
 

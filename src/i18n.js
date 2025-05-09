@@ -889,10 +889,17 @@ i18n
         }
       }
     },
-    lng: localStorage.getItem("language") || "en",
-    fallbackLng: "en",
+    lng: localStorage.getItem("language") || "ar", // ✅ Arabic as default
+    fallbackLng: "ar",
+    react: {
+      useSuspense: false // ✅ disables React suspense to prevent flashing keys
+    },
     interpolation: {
       escapeValue: false
+    },
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"]
     }
   });
 

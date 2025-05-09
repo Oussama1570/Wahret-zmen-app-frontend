@@ -11,6 +11,7 @@ const UserDashboard = () => {
   const { currentUser } = useAuth();
   const { data: orders = [], isLoading } = useGetOrderByEmailQuery(currentUser?.email);
   const { t, i18n } = useTranslation();
+  if (!i18n.isInitialized) return null;
   const lang = i18n.language;
 
   if (isLoading) return <LoadingSpinner />;

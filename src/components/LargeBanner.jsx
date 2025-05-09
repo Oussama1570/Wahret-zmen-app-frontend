@@ -6,6 +6,7 @@ import bannerImg from "../assets/Banner/LargeBanner.png";
 const LargeBanner = () => {
 const { t, i18n } = useTranslation();
 const isRTL = i18n.language === "ar" || i18n.language === "ar-SA";
+if (!i18n.isInitialized) return null;
 
   return (
     <section className="wahretzmen-banner">

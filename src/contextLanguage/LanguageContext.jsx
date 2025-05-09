@@ -6,7 +6,8 @@ export const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(localStorage.getItem("language") || "en");
+  const [language, setLanguage] = useState(localStorage.getItem("language") || "ar");
+
 
   // Function to change language
   const changeLanguage = (lang) => {

@@ -32,6 +32,7 @@ const OurSellers = () => {
 
   // ✅ RTL logic
   const isRTL = i18n.language === "ar" || i18n.language === "ar-SA";
+  if (!i18n.isInitialized) return null;
 
   useEffect(() => {
     document.documentElement.dir = isRTL ? "rtl" : "ltr";

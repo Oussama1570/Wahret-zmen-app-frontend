@@ -8,7 +8,9 @@ import bannerImg from "../../assets/Banner/Banner.png";
 import "../../Styles/StylesAnimatedText.css";
 
 const Banner = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  if (!i18n.isInitialized) return null;
 
   
   return (

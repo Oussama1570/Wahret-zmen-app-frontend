@@ -12,8 +12,10 @@ import { useTranslation } from "react-i18next";
 
 const CartPage = () => {
   const { t, i18n } = useTranslation();
+  if (!i18n.isInitialized) return null;
   const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
+  
 
   const totalPrice = cartItems
     .reduce((acc, item) => acc + item.newPrice * item.quantity, 0)
