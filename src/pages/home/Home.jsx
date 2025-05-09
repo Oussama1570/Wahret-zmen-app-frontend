@@ -68,16 +68,16 @@ const Home = () => {
       <section className="py-12 bg-[#F9F6F2] rounded-2xl shadow-xl mt-12">
         <div className="text-center px-4">
           <h2 className="text-3xl font-bold text-[#8A5D3B] drop-shadow-sm">
-            {t("our_sellers", "Our Traditional Treasures")}
+            {t("our_collections", "Our Traditional Treasures")}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-3">
-            <Trans i18nKey="our_sellers_intro">
+            <Trans i18nKey="our_collections_intro">
               Browse our curated collection of traditional garments—from majestic <strong>Kaftans</strong> to signature <strong>Jebbas</strong>—crafted with pride, precision, and love for culture.
             </Trans>
           </p>
         </div>
         <OurSellers />
-      </section>
+      </section> 
     </FadeInSection>
 
     {/* 📰 News */}

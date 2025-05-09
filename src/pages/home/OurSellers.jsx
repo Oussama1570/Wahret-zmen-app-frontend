@@ -55,7 +55,7 @@ const OurSellers = () => {
   <h2 className="text-4xl text-[#5a382d] font-bold mb-6 text-center uppercase tracking-wide">
     {t("wahret_zmen_collection")}
   </h2>
-</ScrollFade>
+</ScrollFade> 
 
 
 
